@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -509,6 +509,33 @@ dy = g(x)h(y)dx
 \end{align}
 \]</div>
 <p>この積分を実行することで微分方程式の解である未知関数 <span class="math notranslate nohighlight">\(y(x)\)</span>を求めることができる．</p>
+<div class="admonition- admonition">
+<p class="admonition-title">注意</p>
+<p>直接積分形と同様に，変数分離法においても <span class="math notranslate nohighlight">\(dx\)</span> でかけるというのは形式的な説明であり，厳密には両辺の不定積分を行うことを意味している．直接積分形から拡張し，具体的に，</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+\frac{dy}{dx} = g(x) h(y)
+\end{align}
+\]</div>
+<p>という微分方程式より，<span class="math notranslate nohighlight">\(h(y) \neq 0\)</span> として，両辺を<span class="math notranslate nohighlight">\(h(y)\)</span> でわると，</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+\frac{1}{h(y)} \frac{dy}{dx} = g(x)
+\end{align}
+\]</div>
+<p>が得られる．<span class="math notranslate nohighlight">\(h(y)\)</span> は <span class="math notranslate nohighlight">\(x\)</span> に関する関数であるので，両辺を <span class="math notranslate nohighlight">\(x\)</span> で積分すると，</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\int \left(\frac{1}{h(y)} \frac{dy}{dx}\right) dx &amp;= \int g(x) dx \\
+\int \frac{1}{h(y)} dy &amp;= \int g(x) dx \\
+H(y) &amp;= \int g(x) dx + C
+\end{align}
+\end{split}\]</div>
+<p>となる．ただし，<span class="math notranslate nohighlight">\(H(y)\)</span> は <span class="math notranslate nohighlight">\(h(y)\)</span> の原始関数である．</p>
+</div>
 </section>
 <section id="id3">
 <h2>変数分離形の具体例<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>

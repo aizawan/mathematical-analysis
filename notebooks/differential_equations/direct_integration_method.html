@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -484,14 +484,14 @@ document.write(`
 <section id="id2">
 <h2>直接積分形の解法<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>与えられた一階常微分方程式が上記のような形状に変形可能であるとき，次のステップを踏むことで未知関数 <span class="math notranslate nohighlight">\(y=y(x)\)</span> を計算できる．</p>
-<p>まず，微分方程式の両辺に<span class="math notranslate nohighlight">\(dx\)</span>をかけると以下のようになる</p>
+<p>まず，微分方程式の両辺に<span class="math notranslate nohighlight">\(dx\)</span>をかけると以下のようになる．</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{align}
 dy = g(x)dx
 \end{align}
 \]</div>
-<p>式を見てわかるように，<span class="math notranslate nohighlight">\(x\)</span>と<span class="math notranslate nohighlight">\(y\)</span>の項がそれぞれ両辺に移項できたことがわかる．続いて両辺を積分する．</p>
+<p>そして，式を見てわかるように，<span class="math notranslate nohighlight">\(x\)</span>と<span class="math notranslate nohighlight">\(y\)</span>の項がそれぞれ両辺に移項できたことがわかる．続いて両辺を積分する．</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{align}
@@ -506,6 +506,49 @@ y(x) = \int g(x) dx + C
 \end{align}
 \]</div>
 <p>ただし，<span class="math notranslate nohighlight">\(C\)</span>は積分定数である．これは後述する変数分離法で<span class="math notranslate nohighlight">\(y\)</span>に関する項がないときの特殊な形式である．</p>
+<div class="admonition- admonition">
+<p class="admonition-title">定理</p>
+<p><span class="math notranslate nohighlight">\(y = y(x)\)</span> は <span class="math notranslate nohighlight">\(x\)</span> に関する微分可能な関数であり，<span class="math notranslate nohighlight">\(h(y)\)</span> は <span class="math notranslate nohighlight">\(y\)</span> に関する連続関数であるとする．このとき，</p>
+<div class="math notranslate nohighlight">
+\[
+\int \left ( h(y) \frac{dy}{dx} \right ) dx = \int h(y) dy
+\]</div>
+<p>が成立する．</p>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">証明</p>
+<p>関数 <span class="math notranslate nohighlight">\(y = y(x)\)</span> は微分可能であるから，合成関数 <span class="math notranslate nohighlight">\(h(y(x))\)</span> は <span class="math notranslate nohighlight">\(x\)</span> に関して積分可能である．また，連鎖律により，</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{dx} H(y(x)) = h(y(x)) \cdot \frac{dy}{dx}
+\]</div>
+<p>が成り立つ．ただし <span class="math notranslate nohighlight">\(H(y)\)</span> は <span class="math notranslate nohighlight">\(h(y)\)</span> の原始関数である．つまり，<span class="math notranslate nohighlight">\(H(y) = \int h(y) dy\)</span> である．よって，</p>
+<div class="math notranslate nohighlight">
+\[
+\int \left (h(y(x)) \frac{dy}{dx} \right)dx = H(y(x)) = \int h(y) dy
+\]</div>
+<p>となり，証明できる．</p>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">注意</p>
+<p>「<span class="math notranslate nohighlight">\(dx\)</span> を両辺にかける」と説明したが，この操作は<span class="math notranslate nohighlight">\(dx\)</span>と<span class="math notranslate nohighlight">\(dy\)</span>を微小変化量として仮定したあくまで形式的な記法であり，厳密には両辺の不定積分を行うことを意味している．具体的に，</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+\frac{dy}{dx} = g(x)
+\end{align}
+\]</div>
+<p>という微分方程式より，両辺を積分すると，</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\int \left(1 \frac{dy}{dx}\right) dx &amp;= \int g(x) dx \\
+\int dy &amp;= \int g(x) dx \\
+y &amp;= \int g(x) dx + C
+\end{align}
+\end{split}\]</div>
+<p>となる．ここで，上記の定理を用いている．このように，微分記号を分数のように扱ってよいのは，積分記号の中で整合的に意味づけされるからである．</p>
+</div>
 </section>
 <section id="id3">
 <h2>直接積分形の具体例<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>

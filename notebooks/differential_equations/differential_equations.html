@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -470,6 +470,11 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">微分方程式の例</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">一般解と特殊解</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">微分方程式の解の確認</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">具体例</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">補足：カラーマップ</a></li>
 </ul>
 </li>
 </ul>
@@ -525,6 +530,8 @@ F\left(x, \alpha y_1+\beta y_2, \alpha y_1'+\beta y_2'\right)=
 \[
 y' - y = x
 \]</div>
+<p>解答はクリックで確認できる．</p>
+<div class="toggle docutils container">
 <p>前述の線形性の定義を満たすことを確認すればよいので微分方程式を次のように定義する．</p>
 <div class="math notranslate nohighlight">
 \[
@@ -547,6 +554,7 @@ F\left(x, \alpha y_1+\beta y_2, \alpha y_1'+\beta y_2'\right) &amp;= \alpha y_1'
 \end{align}
 \end{split}\]</div>
 <p>以上より，<span class="math notranslate nohighlight">\(y,y'\)</span>の項について両辺が一致するので <span class="math notranslate nohighlight">\(y\)</span> について線形であり，これは線形微分方程式である．</p>
+</div>
 </section>
 <section id="id6">
 <h4>非線形微分方程式の具体例<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
@@ -555,6 +563,8 @@ F\left(x, \alpha y_1+\beta y_2, \alpha y_1'+\beta y_2'\right) &amp;= \alpha y_1'
 \[
 y'' = - y - y^2
 \]</div>
+<p>解答はクリックで確認できる．</p>
+<div class="toggle docutils container">
 <p>前述の線形性の定義を満たすことを確認すればよいので微分方程式を次のように定義する．</p>
 <div class="math notranslate nohighlight">
 \[
@@ -577,6 +587,7 @@ F\left(x, \alpha y_1+\beta y_2, \alpha y_1''+\beta y_2''\right) &amp;= \alpha y_
 \end{align}
 \end{split}\]</div>
 <p>以上より，<span class="math notranslate nohighlight">\(y,y''\)</span>の項について両辺の係数が一致しない．従って，<span class="math notranslate nohighlight">\(y\)</span> について非線形であり，これは非線形微分方程式である．</p>
+</div>
 </section>
 </section>
 <section id="id7">
@@ -702,12 +713,12 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
 </pre></div>
 </div>
 <img alt="../../_images/f0897b867833bf5e8d3789b85de39adae55af82acb5fdde47516ad00ffa6211f.png" src="../../_images/f0897b867833bf5e8d3789b85de39adae55af82acb5fdde47516ad00ffa6211f.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x11375a280&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1110fae80&gt;
 </pre></div>
 </div>
 </div>
 </div>
-<p>上記のように，積分定数 <code class="docutils literal notranslate"><span class="pre">C1</span></code> に値を入力してみると，複数の解の候補がプロットできる．これが一般解であり，解の集合（=関数の集合）ということである．</p>
+<p>上記のように，積分定数 <code class="docutils literal notranslate"><span class="pre">C1</span></code> に値を入力してみると，複数の解の候補がプロットできる．これが一般解であり，解の集合（=関数の集合）ということである．これを解空間といったりする．</p>
 <p>そして，第一回の講義で紹介したように，問題によっては解に条件が課される場合がある．その条件を <strong>初期条件</strong> と呼び，初期条件に基づいて上記の集合からある特定の解（関数）を求めることができる．このときの解を <strong>特殊解</strong> という．</p>
 <p>前述の例に初期条件を付加すると，</p>
 <div class="math notranslate nohighlight">
@@ -756,11 +767,93 @@ y(x) = \frac{x^2}{2} + 1
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/90a12d2c45deee1b45eabeaccbf4e8b611bdee7cf17a003904461145474182db.png" src="../../_images/90a12d2c45deee1b45eabeaccbf4e8b611bdee7cf17a003904461145474182db.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x11375a7f0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1110fa0d0&gt;
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="id11">
+<h3>微分方程式の解の確認<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>得られた解がその微分方程式の解であることを確認するには，これまでの方程式と同様に，等式を満たすことを確認すればよい．</p>
+<p>ここまでで，微分方程式</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} = x
+\]</div>
+<p>の一般解が</p>
+<div class="math notranslate nohighlight">
+\[
+y(x) = \frac{x^2}{2} + C
+\]</div>
+<p>であることが計算できた．実際にこの関数が微分方程式を満たすか確認してみよう．</p>
+<p>得られた一般解を微分する．</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{dx}y(x) = x
+\]</div>
+<p>これは与えられた微分方程式に代入しても明らかであるように等式を満たす．よって微分方程式の解である．</p>
+<div class="admonition- admonition">
+<p class="admonition-title">解空間</p>
+<p>この確認からも明らかなように，<span class="math notranslate nohighlight">\(y(x) = x^2/2\)</span>, <span class="math notranslate nohighlight">\(y(x) = x^2/2 + 1\)</span> などさまざまな関数を解として方程式を満たすことがわかる．これを解の集合（解空間）といった．</p>
+</div>
+<section id="id12">
+<h4>具体例<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
+<p><span class="math notranslate nohighlight">\(y=e^{-x}\)</span>は以下の微分方程式の解であることを確認する．</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+\frac{dy}{dx} + y = 0
+\end{align}
+\]</div>
+<p>解答はクリックで確認できる．</p>
+<div class="toggle docutils container">
+<p>まず解として与えられた <span class="math notranslate nohighlight">\(y\)</span> を微分する．</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+\frac{dy}{dx} = - e^{-x}
+\end{align}
+\]</div>
+<p>これと <span class="math notranslate nohighlight">\(y=e^{-x}\)</span> を与えられた微分方程式に代入する．</p>
+<div class="math notranslate nohighlight">
+\[
+- e^{-x} + e^{-x} = 0
+\]</div>
+<p>この式からも明らかなように等式を満たす．従って，<span class="math notranslate nohighlight">\(y=e^{-x}\)</span>は与えられた微分方程式の解である．</p>
+</div>
+</section>
+</section>
+<section id="id13">
+<h3>補足：カラーマップ<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>Sympyでの解のプロットにあたり，各解のカラーはSympyのplotting（=Matplotlib）のデフォルト値になっている．プロットする際に次のようにカラーマップを取得して，色を指定すると見栄えの良いグラフを描くことができる．</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">plotting</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">y_</span> <span class="o">=</span> <span class="n">dsolve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># 一般解の計算</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">7</span> <span class="c1"># -3 から 3 までの計7本のグラフを書くのでN=7</span>
+
+<span class="n">eqs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+    <span class="n">eqs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y_</span><span class="o">.</span><span class="n">rhs</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;C1&#39;</span><span class="p">),</span> <span class="n">c</span><span class="p">))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">plotting</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="n">eqs</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">cm</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;magma&#39;</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="c1"># magmaカラーマップを使用</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">line_color</span> <span class="o">=</span> <span class="n">cm</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/f08465a624b9b312e5be58633fbb17c91f4b2536f48949df8d9cacdabfb9fb69.png" src="../../_images/f08465a624b9b312e5be58633fbb17c91f4b2536f48949df8d9cacdabfb9fb69.png" />
+</div>
+</div>
+<p>他のカラーマップは<a class="reference external" href="https://matplotlib.org/stable/users/explain/colors/colormaps.html">リファレンス</a>等で確認できる．</p>
 </section>
 </section>
 </section>
@@ -842,6 +935,11 @@ y(x) = \frac{x^2}{2} + 1
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">微分方程式の例</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">一般解と特殊解</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">微分方程式の解の確認</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">具体例</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">補足：カラーマップ</a></li>
 </ul>
 </li>
 </ul>
