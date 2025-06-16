@@ -586,7 +586,7 @@ F\left(x, \alpha y_1+\beta y_2, \alpha y_1''+\beta y_2''\right) &amp;= \alpha y_
 &amp;= \alpha y_1'' + \beta y_2'' + \alpha y_1 + \beta y_2 + \alpha y_1^2 + \beta y_2^2 
 \end{align}
 \end{split}\]</div>
-<p>以上より，<span class="math notranslate nohighlight">\(y,y''\)</span>の項について両辺の係数が一致しない．従って，<span class="math notranslate nohighlight">\(y\)</span> について非線形であり，これは非線形微分方程式である．</p>
+<p>以上より，両辺の係数が一致しない．従って，<span class="math notranslate nohighlight">\(y\)</span> について非線形であり，これは非線形微分方程式である．</p>
 </div>
 </section>
 </section>
@@ -713,7 +713,7 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
 </pre></div>
 </div>
 <img alt="../../_images/f0897b867833bf5e8d3789b85de39adae55af82acb5fdde47516ad00ffa6211f.png" src="../../_images/f0897b867833bf5e8d3789b85de39adae55af82acb5fdde47516ad00ffa6211f.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1110fae80&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x10fdfa970&gt;
 </pre></div>
 </div>
 </div>
@@ -767,10 +767,14 @@ y(x) = \frac{x^2}{2} + 1
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/90a12d2c45deee1b45eabeaccbf4e8b611bdee7cf17a003904461145474182db.png" src="../../_images/90a12d2c45deee1b45eabeaccbf4e8b611bdee7cf17a003904461145474182db.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1110fa0d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1116e85b0&gt;
 </pre></div>
 </div>
 </div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">境界条件</p>
+<p>微分方程式をある区間 <span class="math notranslate nohighlight">\([x_{\alpha}, x_{\beta}]\)</span> で考えるとき，区間の両端 <span class="math notranslate nohighlight">\(x=x_\alpha\)</span>，<span class="math notranslate nohighlight">\(x=x_\beta\)</span> における解がみたす条件，つまり，<span class="math notranslate nohighlight">\(y(x_\alpha)\)</span> と <span class="math notranslate nohighlight">\(y(x_\beta)\)</span> を <strong>境界条件</strong> とよぶ．そして，この条件をみたす解を求める問題を <strong>境界値問題</strong> という．</p>
 </div>
 </section>
 <section id="id11">
