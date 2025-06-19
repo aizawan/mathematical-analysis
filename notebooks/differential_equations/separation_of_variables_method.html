@@ -674,16 +674,15 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
-\frac{du}{dx} - a &amp;= f(u) \\
-\frac{1}{f(u) - a} du &amp;= dx \\
+\frac{1}{f(u) + a} du &amp;= dx \\
 \end{align}
 \end{split}\]</div>
 <p>となり，両辺を積分すると</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
-\int \frac{1}{f(u) - a} du &amp;= \int dx \\
-\int \frac{1}{f(u) - a} du &amp;= x + C \\
+\int \frac{1}{f(u) + a} du &amp;= \int dx \\
+\int \frac{1}{f(u) + a} du &amp;= x + C \\
 \end{align}
 \end{split}\]</div>
 <p>で一般解を導出できる．ただし，<span class="math notranslate nohighlight">\(C\)</span>は任意定数とする．</p>
