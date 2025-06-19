@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>第4回: 課題ファイル &#8212; 数理解析</title>
+    <title>第4回: 課題レポート（参考） &#8212; 数理解析</title>
   
   
   
@@ -447,7 +447,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>第4回: 課題ファイル</h1>
+    <h1>第4回: 課題レポート（参考）</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -457,9 +457,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">課題1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">課題2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">解答</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">課題1の例</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">課題2の例</a></li>
 </ul>
             </nav>
         </div>
@@ -472,351 +471,166 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>第4回: 課題ファイル<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<h1>第4回: 課題レポート（参考）<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>作成日：2025/6/19<br />
+作成者：相澤宏旭</p>
+<p>この課題レポートは参考例です．Jupyter Notebookを用いて作成しました．作成方法はGoogle Colab，Markdown，VSCode，TeXなど指定はしませんが，課題内容と解答がわかるように .pdf形式で提出してください．またレポートのフォーマットも指定しません．</p>
+<hr class="docutils" />
+<p><strong>課題内容</strong>：</p>
+<p>課題1:<br />
+変数分離法で解く微分方程式の問題を <strong>一問</strong> 作問せよ．
+そして，その問題の解答例を数式とSympyの両方で作成せよ．</p>
+<p>課題2:<br />
+同次微分方程式の問題を <strong>一問</strong> 作問せよ．
+そして，その問題の解答例を数式とSympyの両方で作成せよ．</p>
 <section id="id2">
-<h2>課題1<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p><strong>課題1-1:</strong> 次の微分方程式の一般解を求めよ（手計算）．</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{align}
-\frac{dy}{dx} + y = 1
-\end{align}
-\]</div>
-<p><strong>解答</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-\frac{d y}{1-y} &amp;= d x \\
--\log |1-y| &amp;= x+C^{\prime} \\
-|1-y| &amp;= e^{-x-C^{\prime}} \\
-1-y &amp;= \pm e^{-C^{\prime}} e^{-x} \\
-y &amp;= C e^{-x}+1
-\end{align}
-\end{split}\]</div>
-<p><strong>課題1-2:</strong> 次の微分方程式の一般解を求めよ（手計算）．</p>
+<h2>課題1の例<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>次の微分方程式の一般解を求めよ．</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{align}
 \frac{dy}{dx} = xy
 \end{align}
 \]</div>
-<p><strong>解答</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-\frac{d y}{y} &amp;= x dx \\
-\log |y| &amp;= \frac{x^2}{2}+C^{\prime} \\
-|y| &amp;= e^{\frac{x^2}{2}+C^{\prime}} \\
-y &amp;= \pm e^{-C^{\prime}} e^{\frac{x^2}{2}} \\
-y &amp;= C e^{\frac{x^2}{2}}
-\end{align}
-\end{split}\]</div>
-<p><strong>課題1-3:</strong> 次の微分方程式の一般解を求めよ（手計算）．</p>
+<p>与えられた微分方程式は</p>
 <div class="math notranslate nohighlight">
 \[
-\begin{align}
-\frac{dy}{dx} = y^2 + 1
-\end{align}
+\frac{dy}{dx} = xy
 \]</div>
-<p><strong>解答</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-\frac{d y}{y^2+1} &amp;=d x \\
-\tan ^{-1}(y) &amp; =x+C \\
-y &amp; =\tan (x+C)
-\end{align}
-\end{split}\]</div>
-<p>注意：逆三角関数 <span class="math notranslate nohighlight">\(y = \tan x \Leftrightarrow x = \tan^{-1} x\)</span></p>
-<p><strong>課題1-4:</strong> 次の微分方程式の一般解を求めよ（手計算）．</p>
+<p>である．これは <span class="math notranslate nohighlight">\(x\)</span> と <span class="math notranslate nohighlight">\(y\)</span> の変数が分離できる変数分離形の一階常微分方程式であるため，変数分離の手法で解くことができる．</p>
+<p>まず，両辺に <span class="math notranslate nohighlight">\(dx\)</span> をかける．</p>
 <div class="math notranslate nohighlight">
 \[
-\begin{align}
-\left( x + 1\right) \frac{dy}{dx} = y
-\end{align}
+dy = x y\, dx
 \]</div>
-<p><strong>解答</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-\frac{d y}{y} &amp;= \frac{1}{x+1} d x \\
-\log |y| &amp; =\log |x+1|+C^{\prime} \\
-|y| &amp; =e^{\log |x+1|+C^{\prime}} \\
-y &amp; = \pm e^{C^{\prime}}(x+1) \\
-y &amp; =C(x+1)
-\end{align}
-\end{split}\]</div>
-<p><strong>課題1-5:</strong> 次の微分方程式の一般解を求めよ（手計算）．</p>
+<p>つづいて，<span class="math notranslate nohighlight">\(y \ne 0\)</span> の範囲で両辺を <span class="math notranslate nohighlight">\(y\)</span> で割る．ただし <span class="math notranslate nohighlight">\(y\)</span> は恒等的に0ではないとする．</p>
 <div class="math notranslate nohighlight">
 \[
-\begin{align}
-\frac{dy}{dx} = \sqrt{y}
-\end{align}
+\frac{1}{y} dy = x\, dx
 \]</div>
-<p><strong>解答</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-\int \frac{dy}{\sqrt{y}} = \int dx \\
-2 \sqrt{y} = x + C \\
-y = \frac{1}{4} (x + C)^2
-\end{align}
-\end{split}\]</div>
-<p>ただし，<span class="math notranslate nohighlight">\(-C \leq x\)</span> のときのみ成立</p>
-<p><strong>課題1-6:</strong> 次の微分方程式の特殊解を求めよ（手計算）．</p>
+<p>この両辺を積分すると</p>
 <div class="math notranslate nohighlight">
 \[
-\begin{align}
-\frac{dy}{dx} = y(1-y), \qquad y(0)=\frac{1}{2}
-\end{align}
+\int \frac{1}{y} dy = \int x\, dx
 \]</div>
-<p>解答</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-\frac{dy}{y(1-y)} &amp;= dx \\
-\left(\frac{1}{y} + \frac{1}{1-y}\right) dy &amp;= dx \\
-\log |y| - \log |1-y| &amp;= x + C \\
-\log |\frac{y}{1-y}| &amp;= x + C \\
-\frac{y}{1-y} &amp;= \pm e^{x+C} \\
-y &amp;= \frac{De^x}{De^x + 1} \\
-y &amp;= \frac{1}{1+Ee^{-x}}
-\end{align}
-\end{split}\]</div>
-<p>初期条件より</p>
+<p>よって，</p>
 <div class="math notranslate nohighlight">
 \[
-y = \frac{1}{1+e^{-x}}
+\ln|y| = \frac{x^2}{2} + C
 \]</div>
-<p><strong>課題1-7:</strong> 問1-1から問1-6の微分方程式をsympyで実装し，手計算の結果と一致することを確認せよ．</p>
+<p>両辺の指数を取って，<span class="math notranslate nohighlight">\(y\)</span> を解く．</p>
+<div class="math notranslate nohighlight">
+\[
+|y| = e^{\frac{x^2}{2} + C} = e^C \cdot e^{x^2/2}
+\]</div>
+<p>ここで <span class="math notranslate nohighlight">\(\pm e^C\)</span> を任意定数 <span class="math notranslate nohighlight">\(C'\)</span> とおくことで，</p>
+<div class="math notranslate nohighlight">
+\[
+y = C' e^{x^2/2}
+\]</div>
+<p>これがこの微分方程式の一般解である．</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 解答用セル</span>
-
-<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span><span class="p">,</span> <span class="n">Derivative</span><span class="p">,</span> <span class="n">Function</span><span class="p">,</span> <span class="n">dsolve</span><span class="p">,</span> <span class="n">sqrt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span><span class="p">,</span> <span class="n">Derivative</span><span class="p">,</span> <span class="n">Function</span><span class="p">,</span> <span class="n">dsolve</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="n">dy</span> <span class="o">=</span> <span class="n">Derivative</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 
-<span class="n">eq1</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">dy</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">eq2</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">eq3</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">eq4</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">dy</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">eq5</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
-<span class="n">eq6</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="n">y</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">y</span><span class="p">))</span>
-
-<span class="k">for</span> <span class="n">eq</span> <span class="ow">in</span> <span class="p">[</span><span class="n">eq1</span><span class="p">,</span> <span class="n">eq2</span><span class="p">,</span> <span class="n">eq3</span><span class="p">,</span> <span class="n">eq4</span><span class="p">,</span> <span class="n">eq5</span><span class="p">]:</span>
-    <span class="n">y_</span> <span class="o">=</span> <span class="n">dsolve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">eq</span><span class="p">)</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">y_</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">()</span>
-
-<span class="n">y_</span> <span class="o">=</span> <span class="n">dsolve</span><span class="p">(</span><span class="n">eq6</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ics</span><span class="o">=</span><span class="p">{</span><span class="n">y</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">):</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">})</span>
-<span class="n">display</span><span class="p">(</span><span class="n">eq6</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">y_</span><span class="p">)</span>    
+<span class="n">eq</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">y_</span> <span class="o">=</span> <span class="n">dsolve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">eq</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">y_</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 1\]</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle y{\left(x \right)} = C_{1} e^{- x} + 1\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output text_latex math notranslate nohighlight">
 \[\displaystyle \frac{d}{d x} y{\left(x \right)} = x y{\left(x \right)}\]</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\displaystyle y{\left(x \right)} = C_{1} e^{\frac{x^{2}}{2}}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{d}{d x} y{\left(x \right)} = y^{2}{\left(x \right)} + 1\]</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle y{\left(x \right)} = - \tan{\left(C_{1} - x \right)}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \left(x + 1\right) \frac{d}{d x} y{\left(x \right)} = y{\left(x \right)}\]</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle y{\left(x \right)} = C_{1} \left(x + 1\right)\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{d}{d x} y{\left(x \right)} = \sqrt{y{\left(x \right)}}\]</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle y{\left(x \right)} = \frac{C_{1}^{2}}{4} + \frac{C_{1} x}{2} + \frac{x^{2}}{4}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{d}{d x} y{\left(x \right)} = \left(1 - y{\left(x \right)}\right) y{\left(x \right)}\]</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle y{\left(x \right)} = \frac{1}{1 + 1.0 e^{- x}}\]</div>
 </div>
 </div>
 </section>
 <section id="id3">
-<h2>課題2<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
-<p><strong>課題2-1:</strong> 次の微分方程式の一般解を求めよ（手計算）．</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{align}
-x^2\frac{dy}{dx} = y^2
-\end{align}
-\]</div>
-</section>
-<section id="id4">
-<h2>解答<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
-<p>両辺を <span class="math notranslate nohighlight">\(x^2\)</span> で割ると，</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{dy}{dx} = \frac{y^2}{x^2} 
-\]</div>
-<p><span class="math notranslate nohighlight">\( u = \frac{y}{x} \)</span> として変数変換をすると，</p>
-<div class="math notranslate nohighlight">
-\[
-u + x \frac{du}{dx} = u^2 
-\]</div>
-<p>両辺積分する．左辺の積分定数 <span class="math notranslate nohighlight">\(C_1\)</span> と右辺の積分定数 <span class="math notranslate nohighlight">\(C_2\)</span> が存在するがまとめて <span class="math notranslate nohighlight">\(C' = C_1 + C_2\)</span> として</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-\frac{1}{u^2 - u} &amp;= \frac{1}{x} dx \\
-\int \frac{1}{u^2 - u} du &amp;= \int \frac{1}{x} dx \\
-- (\log |u| - \log |u-1|) &amp;= \log |x| + C' \\
-u &amp;= \frac{1}{1-e^{C'} x} \\
-y &amp;= \frac{x}{1-Cx} 
-\end{align}
-\end{split}\]</div>
-<p><strong>課題2-2:</strong> 次の微分方程式の一般解を求めよ（手計算）．</p>
+<h2>課題2の例<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>次の微分方程式の一般解を求めよ．</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{align}
 \frac{dy}{dx} = \frac{x+y}{x}
 \end{align}
 \]</div>
-<p>解答</p>
-<p><span class="math notranslate nohighlight">\(u = \frac{y}{x}\)</span>として変数変換をすると，</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-\frac{dy}{dx} &amp;= 1 + \frac{y}{x} \\
-u + x \frac{du}{dx} &amp;= 1 + u \\
-x \frac{du}{dx} &amp;= 1 \\
-du &amp;= \frac{dx}{x} \\
-\end{align}
-\end{split}\]</div>
-<p>両辺積分する．左辺の積分定数 <span class="math notranslate nohighlight">\(C_1\)</span> と右辺の積分定数 <span class="math notranslate nohighlight">\(C_2\)</span> が存在するがまとめて <span class="math notranslate nohighlight">\(C = C_1 + C_2\)</span> として</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-\int du &amp;= \int \frac{dx}{x} \\
-u &amp;= \log |x| + C \\
-\frac{y}{x} &amp;= \log |x| + C \\
-y &amp;= x \log |x| + Cx
-\end{align}
-\end{split}\]</div>
-<p><strong>課題2-3:</strong> 次の微分方程式の一般解を求めよ（手計算）．</p>
+<p>与えられた微分方程式について</p>
 <div class="math notranslate nohighlight">
 \[
-\begin{align}
-\frac{dy}{dx} = \frac{x-y}{x+y}
-\end{align}
+\frac{dy}{dx} = \frac{x + y}{x}
 \]</div>
-<p>解答</p>
+<p>まず右辺を項ごとに分けて整理すると</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} = 1 + \frac{y}{x}
+\]</div>
+<p>これは同次形微分方程式である．そこで，<span class="math notranslate nohighlight">\(u = \frac{y}{x}\)</span> と変数変換する．このとき、<span class="math notranslate nohighlight">\(dy/dx\)</span> は積の微分により，</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} = u + x \frac{du}{dx}
+\]</div>
+<p>整理すると，</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{align}
-\frac{d y}{d x}&amp;=\frac{x-y}{x+y} \\
-\frac{d y}{d x}&amp;=\frac{1-\frac{y}{x}}{1+\frac{y}{x}}
-\end{align}
+\begin{aligned}
+u + x \frac{du}{dx} &amp;= 1 + u \\
+x \frac{du}{dx} &amp;= 1
+\end{aligned}
 \end{split}\]</div>
+<p>これは <span class="math notranslate nohighlight">\(u\)</span> と <span class="math notranslate nohighlight">\(x\)</span> の変数分離形になっているので，両辺を <span class="math notranslate nohighlight">\(x\)</span> で割ると</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-u+x \frac{d u}{d x} &amp; =\frac{1-u}{1+u} \\
-x \frac{d u}{d x} &amp; =\frac{2-(1+u)^2}{1+u} \\
-\frac{1+u}{2-(1+u)^2} d u &amp; =\frac{d x}{x}
-\end{align}
-\end{split}\]</div>
+\[
+\frac{du}{dx} = \frac{1}{x}
+\]</div>
+<p>両辺を積分する</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-\int \frac{1+u}{2-(1+u)^2} d u &amp; =\int \frac{d x}{x} \\
--\frac{1}{2} \log \left|u^2+2 u-1\right| &amp; =\log |x|+C^{\prime} \\
-u &amp; = \pm \frac{\sqrt{2 x^2 \pm e^{-C^{\prime}}}}{x}-1
-\end{align}
-\end{split}\]</div>
+\[
+\int du = \int \frac{1}{x} dx
+\]</div>
+<p>このとき、左辺の積分定数を <span class="math notranslate nohighlight">\(C_1\)</span>，右辺を <span class="math notranslate nohighlight">\(C_2\)</span> としてもよいが，両辺をまとめて一つの任意定数 <span class="math notranslate nohighlight">\(C = C_2 - C_1\)</span> とおいて</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-u &amp; = \pm \frac{\sqrt{2 x^2+C}}{x}-1 \\
-\frac{y}{x} &amp; = \pm \frac{\sqrt{2 x^2+C}}{x}-1 \\
-y &amp; =-x \pm \sqrt{2 x^2+C}
-\end{align}
-\end{split}\]</div>
-<p><strong>課題2-4:</strong> 問2-1から問2-3の微分方程式をsympyで実装し，手計算の結果と一致することを確認せよ．</p>
+\[
+u = \log |x| + C
+\]</div>
+<p><span class="math notranslate nohighlight">\(u = \frac{y}{x}\)</span> だったので，これを戻すと</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{y}{x} = \log |x| + C
+\]</div>
+<p>両辺に <span class="math notranslate nohighlight">\(x\)</span> をかけて整理すると一般解が得られる．</p>
+<div class="math notranslate nohighlight">
+\[
+y = x \log |x| + Cx
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 解答用セル</span>
-
-<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span><span class="p">,</span> <span class="n">Derivative</span><span class="p">,</span> <span class="n">Function</span><span class="p">,</span> <span class="n">dsolve</span><span class="p">,</span> <span class="n">sqrt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span><span class="p">,</span> <span class="n">Derivative</span><span class="p">,</span> <span class="n">Function</span><span class="p">,</span> <span class="n">dsolve</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="n">dy</span> <span class="o">=</span> <span class="n">Derivative</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="n">x</span><span class="p">)</span>
 
-<span class="n">eq1</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">dy</span><span class="p">,</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">eq2</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="n">x</span><span class="p">)</span>
-<span class="n">eq3</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">))</span>
-
-<span class="k">for</span> <span class="n">eq</span> <span class="ow">in</span> <span class="p">[</span><span class="n">eq1</span><span class="p">,</span> <span class="n">eq2</span><span class="p">,</span> <span class="n">eq3</span><span class="p">]:</span>
-    <span class="n">y_</span> <span class="o">=</span> <span class="n">dsolve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-    
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y_</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-        <span class="n">display</span><span class="p">(</span><span class="n">eq</span><span class="p">)</span>
-        <span class="n">display</span><span class="p">(</span><span class="n">y_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-        <span class="n">display</span><span class="p">(</span><span class="n">y_</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-        <span class="nb">print</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">display</span><span class="p">(</span><span class="n">eq</span><span class="p">)</span>
-        <span class="n">display</span><span class="p">(</span><span class="n">y_</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">()</span>
+<span class="n">y_</span> <span class="o">=</span> <span class="n">dsolve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">eq</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">y_</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle x^{2} \frac{d}{d x} y{\left(x \right)} = y^{2}{\left(x \right)}\]</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle y{\left(x \right)} = - \frac{x}{C_{1} x - 1}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output text_latex math notranslate nohighlight">
 \[\displaystyle \frac{d}{d x} y{\left(x \right)} = \frac{x + y{\left(x \right)}}{x}\]</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\displaystyle y{\left(x \right)} = x \left(C_{1} + \log{\left(x \right)}\right)\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{d}{d x} y{\left(x \right)} = \frac{x - y{\left(x \right)}}{x + y{\left(x \right)}}\]</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle y{\left(x \right)} = - x - \sqrt{C_{1} + 2 x^{2}}\]</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle y{\left(x \right)} = - x + \sqrt{C_{1} + 2 x^{2}}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 </section>
@@ -868,9 +682,8 @@ y &amp; =-x \pm \sqrt{2 x^2+C}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">課題1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">課題2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">解答</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">課題1の例</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">課題2の例</a></li>
 </ul>
   </nav></div>
 
