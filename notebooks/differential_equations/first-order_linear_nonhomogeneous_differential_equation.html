@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -538,6 +538,26 @@ y &amp;= C e^{-\int p(x) dx} + z
 \end{align}
 \end{split}\]</div>
 <p>となり，一階線形非同次微分方程式の解が求めることができた．またこの解を見ると，その解が同次微分方程式の解 <span class="math notranslate nohighlight">\(C e^{-\int p(x) dx}\)</span> と特殊解 <span class="math notranslate nohighlight">\(z\)</span> の和となっていることがわかる．</p>
+<div class="admonition- admonition">
+<p class="admonition-title">解の重ね合わせ</p>
+<p>非同次微分方程式に加えて，その特殊解が与えられている場合，一階線形微分方程式における <strong>重ね合わせの性質</strong> により，同次微分方程式の一般解と非同次微分方程式の特殊解の和として，非同次微分方程式の一般解を表すことができる．</p>
+<p>一般に，以下の一階線形微分方程式</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} + p(x)y = q(x)
+\]</div>
+<p>が与えられたとき，対応する同次方程式（すなわち <span class="math notranslate nohighlight">\(q(x) = 0\)</span> のとき）</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} + p(x)y = 0
+\]</div>
+<p>の一般解を <span class="math notranslate nohighlight">\(u(x)\)</span>，非同次方程式（<span class="math notranslate nohighlight">\(q(x) \ne 0\)</span>）の特殊解を <span class="math notranslate nohighlight">\(v(x)\)</span> とすれば，非同次方程式の一般解 <span class="math notranslate nohighlight">\(y(x)\)</span> は次のように表される．</p>
+<div class="math notranslate nohighlight">
+\[
+y(x) = u(x) + v(x)
+\]</div>
+<p>この構造は，線形微分方程式の解空間が同次解空間の一次平行移動であるからである．</p>
+</div>
 <section id="id3">
 <h3>特殊解が既知のときの解法の具体例<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>では，次の一階線形非同次微分方程式を解いてみよう．ただし，特殊解として <span class="math notranslate nohighlight">\(y = x - 1\)</span> が与えられている．</p>
@@ -600,7 +620,7 @@ y = Ce^{-x} + x - 1
 \frac{d}{dx} y e^{\int p(x) dx} &amp;= q(x)e^{\int p(x) dx}
 \end{align}
 \end{split}\]</div>
-<p>この式を<span class="math notranslate nohighlight">\(x\)</span>について積分すると一階線形非同次微分方程式の一般解が得られる．左辺については <span class="math notranslate nohighlight">\(\frac{d}{dx} y e^{\int p(x) dx}\)</span> が <span class="math notranslate nohighlight">\(y e^{\int p(x) dx}\)</span> の <span class="math notranslate nohighlight">\(x\)</span> に関する導関数であるので，それを <span class="math notranslate nohighlight">\(x\)</span> で積分する，つまり，結果は <span class="math notranslate nohighlight">\(y e^{\int p(x) dx}\)</span> となるのは当たり前である．</p>
+<p>この式を<span class="math notranslate nohighlight">\(x\)</span>について積分すると一階線形非同次微分方程式の一般解が得られる．左辺については <span class="math notranslate nohighlight">\(\frac{d}{dx} y e^{\int p(x) dx}\)</span> が <span class="math notranslate nohighlight">\(y e^{\int p(x) dx}\)</span> の <span class="math notranslate nohighlight">\(x\)</span> に関する導関数であるので，それを <span class="math notranslate nohighlight">\(x\)</span> で積分する，つまり，結果は <span class="math notranslate nohighlight">\(y e^{\int p(x) dx}\)</span> となることに注意する．</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
@@ -609,7 +629,7 @@ y e^{\int p(x) dx} + C' &amp;= \int q(x)e^{\int p(x) dx} dx\\
 y &amp;= e^{-\int p(x) dx} \left ( \int q(x)e^{\int p(x) dx} dx + C \right) 
 \end{align}
 \end{split}\]</div>
-<p>ただし，<span class="math notranslate nohighlight">\(C'\)</span>は積分定数とし，ここでは，任意定数 <span class="math notranslate nohighlight">\(C=-C'\)</span> とした．</p>
+<p>ただし，<span class="math notranslate nohighlight">\(C'\)</span>は積分定数としたが，ここでは，簡潔な表記のため <span class="math notranslate nohighlight">\(C=-C'\)</span> とした．</p>
 <section id="id5">
 <h3>積分因子による解法の具体例<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>では，次の一階線形非同次微分方程式を解いてみよう．以下の微分方程式は <span class="math notranslate nohighlight">\(p(x)=1, q(x)=x\)</span> のときの場合である．</p>

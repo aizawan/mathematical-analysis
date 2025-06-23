@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -457,11 +457,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">線形微分方程式</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">一階線形微分方程式</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">一階線形同次微分方程式</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">一階線形同次微分方程式の解法</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">一階線形同次微分方程式の具体例</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">一階線形微分方程式</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">一階線形同次微分方程式</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">一階線形同次微分方程式の解法</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">一階線形同次微分方程式の具体例</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Pythonによる実装</a></li>
 </ul>
 </li>
@@ -479,7 +478,17 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>一階線形同次微分方程式<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
-<h2>線形微分方程式<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h2>一階線形微分方程式<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>ここでは一階線形微分方程式に着目し，その解法を紹介する．まず一階線形微分方程式は以下の形式で表される微分方程式である．</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+\frac{dy}{dx}+p(x)y=q(x)
+\end{align}
+\]</div>
+<p>ここで<span class="math notranslate nohighlight">\(p(x)\)</span>と<span class="math notranslate nohighlight">\(q(x)\)</span>は<span class="math notranslate nohighlight">\(x\)</span>の関数である．ここで<span class="math notranslate nohighlight">\(p(x)\)</span>と<span class="math notranslate nohighlight">\(q(x)\)</span>はすべての入力に対して0を出力しないという点に留意されたい．もし0を出力する場合，この関数は恒等的に0ではない関数と呼ばれ，この形式の微分方程式は変数分離形に容易に求めることができる．</p>
+<div class="admonition- admonition">
+<p class="admonition-title">線形微分方程式</p>
 <p>線形微分方程式とは線形性を持つ微分方程式である．微分方程式を</p>
 <div class="math notranslate nohighlight">
 \[
@@ -494,20 +503,10 @@ F\left(x, \alpha y_1+\beta y_2, \alpha y_1'+\beta y_2'\right)=
 \end{align}
 \]</div>
 <p>が成立すれば微分方程式が<strong>線形</strong>であり，その微分方程式を<strong>線形微分方程式</strong>と呼ぶ．</p>
+</div>
 </section>
 <section id="id3">
-<h2>一階線形微分方程式<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
-<p>ここでは一階線形微分方程式に着目し，その解法を紹介する．まず一階線形微分方程式は以下の形式で表される微分方程式である．</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{align}
-\frac{dy}{dx}+p(x)y=q(x)
-\end{align}
-\]</div>
-<p>ここで<span class="math notranslate nohighlight">\(p(x)\)</span>と<span class="math notranslate nohighlight">\(q(x)\)</span>は<span class="math notranslate nohighlight">\(x\)</span>の関数である．ここで<span class="math notranslate nohighlight">\(p(x)\)</span>と<span class="math notranslate nohighlight">\(q(x)\)</span>はすべての入力に対して0を出力しないという点に留意されたい．もし0を出力する場合，この関数は恒等的に0ではない関数と呼ばれ，この形式の微分方程式は変数分離形に容易に求めることができる．</p>
-</section>
-<section id="id4">
-<h2>一階線形同次微分方程式<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<h2>一階線形同次微分方程式<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>上記では，<span class="math notranslate nohighlight">\(p(x)\)</span>と<span class="math notranslate nohighlight">\(q(x)\)</span>は恒等的に0ではない関数であると説明したが，ここでは，<span class="math notranslate nohighlight">\(q(x)=0\)</span>のときの微分方程式を考える．このとき微分方程式は以下のように変形できる．</p>
 <div class="math notranslate nohighlight">
 \[
@@ -516,23 +515,23 @@ F\left(x, \alpha y_1+\beta y_2, \alpha y_1'+\beta y_2'\right)=
 \end{align}
 \]</div>
 <p>このときの微分方程式を一階線形同次微分方程式と呼ぶ．</p>
-<section id="id5">
-<h3>一階線形同次微分方程式の解法<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<section id="id4">
+<h3>一階線形同次微分方程式の解法<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>上記に示した一階線形微分方程式の一般解は変数分離形で容易に計算できる．まず左辺には<span class="math notranslate nohighlight">\(y\)</span>に関する項を，右辺には<span class="math notranslate nohighlight">\(x\)</span>に関する項となるように式変形を行う．</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-\frac{1}{y} \frac{dy}{dx} &amp;= -p(x) \\
-\frac{1}{y} dy &amp;= -p(x) dx
-\end{align}
-\end{split}\]</div>
-<p>次に，両辺を積分する．</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{align}
-\int \frac{1}{y} dy = - \int p(x) dx
+\frac{1}{y} \frac{dy}{dx} &amp;= -p(x)
 \end{align}
 \]</div>
+<p>次に，両辺を <span class="math notranslate nohighlight">\(x\)</span> で積分する．</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\int \left(\frac{1}{y} \frac{dy}{dx}\right) dx &amp;= - \int p(x) dx \\
+\int \frac{1}{y} dy &amp;= - \int p(x) dx
+\end{align}
+\end{split}\]</div>
 <p>これを解くと，以下の解が得られる．</p>
 <div class="math notranslate nohighlight">
 \[
@@ -540,7 +539,7 @@ F\left(x, \alpha y_1+\beta y_2, \alpha y_1'+\beta y_2'\right)=
 \ln |y| = - \int p(x) dx + C'
 \end{align}
 \]</div>
-<p>ここで，<span class="math notranslate nohighlight">\(C'\)</span>は積分定数である．第4回の式展開でも紹介したように，<span class="math notranslate nohighlight">\(\log |y| = x \rightarrow e^x = |y|\)</span> であり，絶対値を外すと，<span class="math notranslate nohighlight">\(y=\pm e^x\)</span> となる．従って，上記の一般解は <span class="math notranslate nohighlight">\(y(x)\)</span>の形に書き換えることができる．</p>
+<p>ここで，<span class="math notranslate nohighlight">\(C'\)</span>は積分定数である．変数分離形の式展開でも紹介したように，<span class="math notranslate nohighlight">\(\log |y| = x \rightarrow e^x = |y|\)</span> であり，絶対値を外すと，<span class="math notranslate nohighlight">\(y=\pm e^x\)</span> となる．従って，上記の一般解は <span class="math notranslate nohighlight">\(y(x)\)</span>の形に書き換えることができる．</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
@@ -551,8 +550,8 @@ y(x) &amp;= \pm e^{-\int p(x) \, dx + C'} \\
 \end{split}\]</div>
 <p>ここで，<span class="math notranslate nohighlight">\(C=\pm e^{C'}\)</span>とした．</p>
 </section>
-<section id="id6">
-<h3>一階線形同次微分方程式の具体例<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<section id="id5">
+<h3>一階線形同次微分方程式の具体例<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>では，次の一階線形同次微分方程式を解いてみよう．以下の微分方程式は <span class="math notranslate nohighlight">\(p(x)=x\)</span> のときの場合である．</p>
 <div class="math notranslate nohighlight">
 \[
@@ -567,14 +566,15 @@ y(x) &amp;= \pm e^{-\int p(x) \, dx + C'} \\
 \[\begin{split}
 \begin{align}
 \frac{dy}{dx} &amp;= -xy \\
-\frac{1}{y} dy &amp;= -x dx
+\frac{1}{y} \frac{dy}{dx} &amp;= -x
 \end{align}
 \end{split}\]</div>
-<p>となる．続いて，両辺を積分する．</p>
+<p>となる．続いて，両辺を <span class="math notranslate nohighlight">\(x\)</span> で積分する．</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{align}
-\int \frac{1}{y} dy = - \int x dx
+\int \left(\frac{1}{y} \frac{dy}{dx}\right) dx &amp;= - \int x dx
+\int \frac{1}{y} dy &amp;= - \int x dx
 \end{align}
 \]</div>
 <p>積分定数を <span class="math notranslate nohighlight">\(C'\)</span> とすると以下となる．</p>
@@ -646,7 +646,9 @@ y &amp;= \pm e^{- \frac{x^2}{2} + C'} \\
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
-Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
 </pre></div>
 </div>
 <img alt="../../_images/adffaf4c701a0baea9dc89eb675eeb6e1725fa52fd308b9afd52277a3cd46e3b.png" src="../../_images/adffaf4c701a0baea9dc89eb675eeb6e1725fa52fd308b9afd52277a3cd46e3b.png" />
@@ -720,11 +722,10 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">線形微分方程式</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">一階線形微分方程式</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">一階線形同次微分方程式</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">一階線形同次微分方程式の解法</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">一階線形同次微分方程式の具体例</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">一階線形微分方程式</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">一階線形同次微分方程式</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">一階線形同次微分方程式の解法</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">一階線形同次微分方程式の具体例</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Pythonによる実装</a></li>
 </ul>
 </li>
