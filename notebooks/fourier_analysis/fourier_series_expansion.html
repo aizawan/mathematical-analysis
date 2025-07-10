@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -625,7 +625,7 @@ a_k = c_k &amp;= \frac{\int_{-\pi}^{\pi} \cos kx f(x) dx}{\int_{-\pi}^{\pi} \cos
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
-a_k = c_k &amp;= \frac{\int_{-\pi}^{\pi} \sin kx f(x) dx}{\int_{-\pi}^{\pi} \sin^2 kx dx} \\
+b_k = c_k &amp;= \frac{\int_{-\pi}^{\pi} \sin kx f(x) dx}{\int_{-\pi}^{\pi} \sin^2 kx dx} \\
 &amp;= \frac{\int_{-\pi}^{\pi} f(x) \sin kx dx}{\pi} \\
 &amp;= \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin kx dx \\
 \end{align}
@@ -734,7 +734,7 @@ b_k &amp;= \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin kx dx \\
 <div class="math notranslate nohighlight">
 \[
 \begin{align}
-a_0 = 1, \quad a_k = 0, \quad b_k = - \frac{1}{k \pi} \left \{1 - \left ( -1 \right )^k \right \}
+a_0 = \frac{1}{2}, \quad a_k = 0, \quad b_k = - \frac{1}{k \pi} \left \{1 - \left ( -1 \right )^k \right \}
 \end{align}
 \]</div>
 <p>これをフーリエ級数展開の式に代入する．</p>
@@ -784,7 +784,7 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
 </pre></div>
 </div>
 <img alt="../../_images/5b6cefb03c7b697f7e49d3e745fac43ef3ee64d9040204d64ec017f91a379455.png" src="../../_images/5b6cefb03c7b697f7e49d3e745fac43ef3ee64d9040204d64ec017f91a379455.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x111682370&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x10f284880&gt;
 </pre></div>
 </div>
 </div>
@@ -953,7 +953,7 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/1604707281f6a282ccd7815081bed589c028132e4cf0ec82821d916225a82bea.png" src="../../_images/1604707281f6a282ccd7815081bed589c028132e4cf0ec82821d916225a82bea.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x12a6ba790&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1282b8ac0&gt;
 </pre></div>
 </div>
 </div>
@@ -967,7 +967,7 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/7ca03be68de5770a4c88a4f6a0cc4b2b66461167eff77183f60f11c1155ebc2a.png" src="../../_images/7ca03be68de5770a4c88a4f6a0cc4b2b66461167eff77183f60f11c1155ebc2a.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x12a774730&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1283b85b0&gt;
 </pre></div>
 </div>
 </div>

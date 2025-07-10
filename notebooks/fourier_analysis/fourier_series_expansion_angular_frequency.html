@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -477,7 +477,13 @@ document.write(`
 <h1>角周波数でのフーリエ級数展開<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
 <h2>角周波数へのフーリエ級数展開の拡張<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p>フーリエ級数展開によって与えられた関数を異なる周期を持つ三角関数の線形結合で表現できた．ここで複素フーリエ級数展開とフーリエ変換のための単位時間における回転角の変化量でフーリエ級数展開を書き換える．この目的としては，角度 <span class="math notranslate nohighlight">\(\theta(=x)\)</span> のフーリエ級数展開から時間 <span class="math notranslate nohighlight">\(t\)</span> のフーリエ級数展開へ解釈することにある．</p>
+<p>フーリエ級数展開によって与えられた関数を異なる周期を持つ三角関数の線形結合で表現できた．ここで複素フーリエ級数展開とフーリエ変換のための単位時間における回転角の変化量でフーリエ級数展開を書き換える．この目的としては，これまで <span class="math notranslate nohighlight">\(x = \theta\)</span> を角度としてフーリエ級数展開を考えていたが，これを時間 <span class="math notranslate nohighlight">\(t\)</span> に基づく回転角 <span class="math notranslate nohighlight">\(\theta = \omega t\)</span> に置き換えてフーリエ級数展開を解釈することにある．</p>
+<p>このような時間領域でのフーリエ級数展開は</p>
+<ul class="simple">
+<li><p>時間領域での信号解析や微分方程式が実応用（例：音声、電気信号、画像など）で中心になるため，関数を時間変数 <span class="math notranslate nohighlight">\(t\)</span> で考えることが重要</p></li>
+<li><p>角周波数 <span class="math notranslate nohighlight">\(\omega\)</span> を用いることで，フーリエ変換・ラプラス変換への接続がしやすい
+といった利点がある．</p></li>
+</ul>
 <p>復習となるが，フーリエ級数展開のベースとなっている三角関数は一定間隔（周期 <span class="math notranslate nohighlight">\(T&gt;0\)</span>）で同じ値を繰り返す周期関数であった．</p>
 <div class="math notranslate nohighlight">
 \[
@@ -505,7 +511,7 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
 </pre></div>
 </div>
 <img alt="../../_images/89339d36829da10d8e83775679e179fa032906685eb7924c9bd9944fc8842cf1.png" src="../../_images/89339d36829da10d8e83775679e179fa032906685eb7924c9bd9944fc8842cf1.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x10e9b08b0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1111c08b0&gt;
 </pre></div>
 </div>
 </div>
@@ -531,12 +537,44 @@ v = \frac{\omega}{2 \pi}
 \omega = \frac{2 \pi}{T}
 \]</div>
 <p>以上より，角度 <span class="math notranslate nohighlight">\(\theta(=x)\)</span> から時間 <span class="math notranslate nohighlight">\(t\)</span> の関数としてフーリエ級数展開を解釈する準備ができた．</p>
-<p>補足となるが角度 <span class="math notranslate nohighlight">\(\theta(=x)\)</span> から時間 <span class="math notranslate nohighlight">\(t\)</span> の関数を図でプロットすると以下のようになる．</p>
+<p>補足：周波数と周期については以下の図を確認されたい．</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># 周期： sin(\omega t) に関する周期．\omega = 2\pi / T より T=1 とすると，\omega = 2\pi</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">T</span> <span class="c1"># 周波数： v = 1 / T</span>
+<span class="n">omega</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="n">T</span> <span class="c1"># 回転角の変化量</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span> <span class="c1"># 0から2秒まで</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">omega</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s1">&#39;$v = </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">T</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s1">&#39;Period $T = </span><span class="si">{</span><span class="n">T</span><span class="si">}</span><span class="s1">$ s&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">T</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Relationship between frequency and period&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time $t$ [seconds]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">T</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;2T&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/67d097b5e6d015d418dc741b231bec59e78d5cca04acc3ac4a939631ab296cef.png" src="../../_images/67d097b5e6d015d418dc741b231bec59e78d5cca04acc3ac4a939631ab296cef.png" />
+</div>
+</div>
+<p>補足：単位円での角度 <span class="math notranslate nohighlight">\(\theta(=x)\)</span> から時間 <span class="math notranslate nohighlight">\(t\)</span> の関数を図でプロットすると以下のようになる．</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">360</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
@@ -572,7 +610,7 @@ v = \frac{\omega}{2 \pi}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x125d5bfa0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x12861fc70&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/3e566e144b2fe819a4adb7a0dd338e27969d07692735ddfa6ac7db71d4468301.png" src="../../_images/3e566e144b2fe819a4adb7a0dd338e27969d07692735ddfa6ac7db71d4468301.png" />
@@ -722,7 +760,7 @@ f(t) &amp;\approx \frac{a_{0}}{2} + \sum_{k=1}^{\infty} (a_k \cos k \omega_0 t +
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/6d03d53693c872f87886906d5c118366cc5e8016f9a8ac03cdbe1f3113dee6be.png" src="../../_images/6d03d53693c872f87886906d5c118366cc5e8016f9a8ac03cdbe1f3113dee6be.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x125d80700&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1285de160&gt;
 </pre></div>
 </div>
 </div>
@@ -896,7 +934,7 @@ f(t) &amp;\approx \frac{a_{0}}{2} + \sum_{k=1}^{\infty} (a_k \cos k \omega_0 t +
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/96b0cce89f7435f3dd805939fadb97c1bda9ee56ed3b88b8203a4978409b1659.png" src="../../_images/96b0cce89f7435f3dd805939fadb97c1bda9ee56ed3b88b8203a4978409b1659.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1262861f0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x128c6baf0&gt;
 </pre></div>
 </div>
 </div>
@@ -910,7 +948,7 @@ f(t) &amp;\approx \frac{a_{0}}{2} + \sum_{k=1}^{\infty} (a_k \cos k \omega_0 t +
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/b23c220c580b1a7dbd9ad48c26d743009121cf6455b166c8b3dc7a1c107403c1.png" src="../../_images/b23c220c580b1a7dbd9ad48c26d743009121cf6455b166c8b3dc7a1c107403c1.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1262f37c0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x128c8ce20&gt;
 </pre></div>
 </div>
 </div>
