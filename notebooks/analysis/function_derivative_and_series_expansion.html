@@ -1,178 +1,112 @@
 
 <!DOCTYPE html>
 
-
-<html lang="en" data-content_root="../../" >
-
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>関数，微積分，級数展開 &#8212; 数理解析</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
-  </script>
-  
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-  
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/analysis/function_derivative_and_series_expansion';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="微分方程式" href="../differential_equations/differential_equations.html" />
     <link rel="prev" title="数理解析の導入" href="../introduction.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
-  
-  
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+    
+    <div class="container-fluid" id="banner"></div>
 
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+    
 
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
-  
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
-  
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
       
-      
-      
-      <div class="bd-sidebar-primary bd-sidebar">
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-
-  
-    
-  
-
-<a class="navbar-brand logo" href="../../intro.html">
-  
-  
-  
-  
-  
-    
-    
       
-    
-    
-    <img src="../../_static/icon.png" class="logo__image only-light" alt="数理解析 - Home"/>
-    <script>document.write(`<img src="../../_static/icon.png" class="logo__image only-dark" alt="数理解析 - Home"/>`);</script>
-  
-  
-</a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
+      
+      <img src="../../_static/icon.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">数理解析</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -181,329 +115,713 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">はじめに</span></p>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  はじめに
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../introduction.html">数理解析の導入</a></li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction.html">
+   数理解析の導入
+  </a>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">微積分</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  微積分
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">関数，微積分，級数展開</a></li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   関数，微積分，級数展開
+  </a>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">微分方程式</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  微分方程式
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../differential_equations/differential_equations.html">微分方程式</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../differential_equations/direct_integration_method.html">直接積分形</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../differential_equations/separation_of_variables_method.html">変数分離法</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../differential_equations/homogeneous_differential_equation.html">同次微分方程式</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../differential_equations/first-order_linear_homogeneous_differential_equation.html">一階線形同次微分方程式</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../differential_equations/first-order_linear_nonhomogeneous_differential_equation.html">一階線形非同次微分方程式</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../differential_equations/Bernoulli_differential_equation.html">ベルヌーイ型微分方程式</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../differential_equations/Clairaut%27s_differential_equation.html">クレロー型微分方程式</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../differential_equations/exact_differential_equation.html">完全微分方程式</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../differential_equations/second-order_constant_coefficient_linear_homogeneous_differential_equation.html">二階定数係数線形同次微分方程式</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../differential_equations/second-order_constant_coefficient_linear_nonhomogeneous_differential_equation.html">二階定数係数線形非同次微分方程式</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../differential_equations/physics-informed_neural_network.html">Physics Informed Neural Network</a></li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differential_equations/differential_equations.html">
+   微分方程式
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differential_equations/direct_integration_method.html">
+   直接積分形
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differential_equations/separation_of_variables_method.html">
+   変数分離法
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differential_equations/homogeneous_differential_equation.html">
+   同次微分方程式
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differential_equations/first-order_linear_homogeneous_differential_equation.html">
+   一階線形同次微分方程式
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differential_equations/first-order_linear_nonhomogeneous_differential_equation.html">
+   一階線形非同次微分方程式
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differential_equations/Bernoulli_differential_equation.html">
+   ベルヌーイ型微分方程式
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differential_equations/Clairaut%27s_differential_equation.html">
+   クレロー型微分方程式
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differential_equations/exact_differential_equation.html">
+   完全微分方程式
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differential_equations/second-order_constant_coefficient_linear_homogeneous_differential_equation.html">
+   二階定数係数線形同次微分方程式
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differential_equations/second-order_constant_coefficient_linear_nonhomogeneous_differential_equation.html">
+   二階定数係数線形非同次微分方程式
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differential_equations/physics-informed_neural_network.html">
+   Physics Informed Neural Network
+  </a>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">フーリエ解析</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  フーリエ解析
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../fourier_analysis/periodic_function.html">周期関数</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../fourier_analysis/orthogonal_function.html">直交関数系</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../fourier_analysis/inner_product_space.html">内積空間</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../fourier_analysis/fourier_series_expansion.html">フーリエ級数展開</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../fourier_analysis/fourier_series_expansion_angular_frequency.html">角周波数でのフーリエ級数展開</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../fourier_analysis/complex_fourier_series_expansion.html">複素フーリエ級数展開</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../fourier_analysis/fourier_transform.html">フーリエ変換</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../fourier_analysis/fourier_analysis_and_differential_equations.html">フーリエ変換と微分方程式</a></li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fourier_analysis/periodic_function.html">
+   周期関数
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fourier_analysis/orthogonal_function.html">
+   直交関数系
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fourier_analysis/inner_product_space.html">
+   内積空間
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fourier_analysis/fourier_series_expansion.html">
+   フーリエ級数展開
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fourier_analysis/fourier_series_expansion_angular_frequency.html">
+   角周波数でのフーリエ級数展開
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fourier_analysis/complex_fourier_series_expansion.html">
+   複素フーリエ級数展開
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fourier_analysis/fourier_transform.html">
+   フーリエ変換
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fourier_analysis/fourier_analysis_and_differential_equations.html">
+   フーリエ変換と微分方程式
+  </a>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">ラプラス変換</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ラプラス変換
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../laplace_transform/laplace_transform.html">ラプラス変換</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../laplace_transform/laplace_transform_and_differential_equations.html">ラプラス変換と微分方程式</a></li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../laplace_transform/laplace_transform.html">
+   ラプラス変換
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../laplace_transform/laplace_transform_and_differential_equations.html">
+   ラプラス変換と微分方程式
+  </a>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">数値解析</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  数値解析
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../numerical_analysis/numerical_analysis.html">数値解法</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../numerical_analysis/euler_method.html">オイラー法</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../numerical_analysis/heun_method.html">ホイン法</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../numerical_analysis/midpoint_method.html">中点法</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../numerical_analysis/runge-kutta_method.html">ルンゲ・クッタ法</a></li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numerical_analysis/numerical_analysis.html">
+   数値解法
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numerical_analysis/euler_method.html">
+   オイラー法
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numerical_analysis/heun_method.html">
+   ホイン法
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numerical_analysis/midpoint_method.html">
+   中点法
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numerical_analysis/runge-kutta_method.html">
+   ルンゲ・クッタ法
+  </a>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">補足情報</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  補足情報
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../advanced_materials.html">参考書・資料</a></li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../advanced_materials.html">
+   参考書・資料
+  </a>
+ </li>
 </ul>
 
     </div>
 </nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
     </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
+    <div id="rtd-footer-container"></div>
+</div>
 
 
-      </div>
-      
-      <main id="main-content" class="bd-main" role="main">
-        
-        
+          
 
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
 
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article d-print-none">
-<div class="header-article-items header-article__inner">
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
   
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</button></div>
-      
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
     </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
   </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://colab.research.google.com/github/aizawan/mathematical-analysis/blob/main/notebooks/analysis/function_derivative_and_series_expansion.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch on Colab"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
-  </span>
-<span class="btn__text-container">Colab</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/aizawan/mathematical-analysis" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/aizawan/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2Fnotebooks/analysis/function_derivative_and_series_expansion.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../../_sources/notebooks/analysis/function_derivative_and_series_expansion.ipynb" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
+  <div class="menu-dropdown__content">
+    <ul>
       <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
+        <a href="https://colab.research.google.com/github/aizawan/mathematical-analysis/blob/main/notebooks/analysis/function_derivative_and_series_expansion.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
 >
   
 
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
   </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
       
-  </ul>
+    </ul>
+  </div>
 </div>
-
-
-
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
 >
   
 
-<span class="btn__icon-container">
+<span class="headerbtn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-
-
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
   </button>
-`);
-</script>
-
-
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
-</div></div>
-      
-    </div>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/aizawan/mathematical-analysis"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
   
-</div>
-</div>
-              
-              
 
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>関数，微積分，級数展開</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sympy">Sympyの基礎</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">関数</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">一変数関数</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">多変数関数</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">関数のプロット</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">一変数関数のプロット</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">二変数関数のプロット</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function"><code class="docutils literal notranslate"><span class="pre">Function</span></code> クラス</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">微積分</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">微分</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">偏微分</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative"><code class="docutils literal notranslate"><span class="pre">Derivative</span></code> クラス</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">積分</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">定積分</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">不定積分</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">広義積分</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrate"><code class="docutils literal notranslate"><span class="pre">Integrate</span></code> クラス</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">補足：関数の連続性</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">級数展開</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">テイラー展開</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">補足：方程式</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">補足：総和</a></li>
-</ul>
-            </nav>
-        </div>
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/aizawan/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2Fnotebooks/analysis/function_derivative_and_series_expansion.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/notebooks/analysis/function_derivative_and_series_expansion.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-              
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sympy">
+   Sympyの基礎
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   関数
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     一変数関数
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     多変数関数
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     関数のプロット
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       一変数関数のプロット
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       二変数関数のプロット
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#function">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Function
+      </span>
+     </code>
+     クラス
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   微積分
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     微分
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     偏微分
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derivative">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Derivative
+      </span>
+     </code>
+     クラス
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     積分
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id12">
+       定積分
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id13">
+       不定積分
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id14">
+       広義積分
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integrate">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Integrate
+      </span>
+     </code>
+     クラス
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     補足：関数の連続性
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id16">
+   級数展開
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     テイラー展開
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id18">
+   補足：方程式
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id19">
+   補足：総和
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>関数，微積分，級数展開</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sympy">
+   Sympyの基礎
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   関数
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     一変数関数
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     多変数関数
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     関数のプロット
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       一変数関数のプロット
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       二変数関数のプロット
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#function">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Function
+      </span>
+     </code>
+     クラス
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   微積分
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     微分
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     偏微分
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derivative">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Derivative
+      </span>
+     </code>
+     クラス
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     積分
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id12">
+       定積分
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id13">
+       不定積分
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id14">
+       広義積分
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integrate">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Integrate
+      </span>
+     </code>
+     クラス
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     補足：関数の連続性
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id16">
+   級数展開
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     テイラー展開
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id18">
+   補足：方程式
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id19">
+   補足：総和
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
                 
-<div id="searchbox"></div>
-                <article class="bd-article">
-                  
+              <div>
+                
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>関数，微積分，級数展開<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<h1>関数，微積分，級数展開<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
 <section id="sympy">
-<h2>Sympyの基礎<a class="headerlink" href="#sympy" title="Link to this heading">#</a></h2>
+<h2>Sympyの基礎<a class="headerlink" href="#sympy" title="Permalink to this headline">#</a></h2>
 <p>Sympyは数式や変数を記号のまま代数的に計算できるPythonのライブラリである．数理解析で学ぶ微分方程式・フーリエ解析をSympyで理解するための最小限の使い方をここでまとめる．</p>
 <p>まず，<strong>変数（variable）</strong> とは，任意の範囲で任意の値を取ることができる記号（文字）である．具体的には，<span class="math notranslate nohighlight">\(y=2x+1\)</span>という一次関数があったとき，変数は <span class="math notranslate nohighlight">\(x\)</span> と <span class="math notranslate nohighlight">\(y\)</span> である．</p>
 <p>Pythonにおける変数と計算の扱いを確認する．</p>
@@ -534,12 +852,6 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
-Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
 </pre></div>
 </div>
 </div>
@@ -575,7 +887,7 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6299df3297128697541f355ea80ee61ad31f3542ae0c847e528f312c9d6a915c.png" src="../../_images/6299df3297128697541f355ea80ee61ad31f3542ae0c847e528f312c9d6a915c.png" />
+<img alt="../../_images/function_derivative_and_series_expansion_10_0.png" src="../../_images/function_derivative_and_series_expansion_10_0.png" />
 </div>
 </div>
 <p>本講義で扱うSympyでは，代入をすることなく，文字として変数を扱ったプログラミングが可能である．つまり，これまでの数学の授業で扱ってきたように数式と変数を定義できる．まずはSympyから変数を扱うための<code class="docutils literal notranslate"><span class="pre">symbols</span></code>を<code class="docutils literal notranslate"><span class="pre">import</span></code>する．</p>
@@ -627,8 +939,8 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/50b4781dd97727677f318ed2ab25d3ad91f571d3f4ab7cbe7fc5fa7235864809.png" src="../../_images/50b4781dd97727677f318ed2ab25d3ad91f571d3f4ab7cbe7fc5fa7235864809.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1248928b0&gt;
+<img alt="../../_images/function_derivative_and_series_expansion_19_0.png" src="../../_images/function_derivative_and_series_expansion_19_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7fe5d93ebeb0&gt;
 </pre></div>
 </div>
 </div>
@@ -660,7 +972,7 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
 <p><span class="math notranslate nohighlight">\(2 \times 1 + 1 = 3\)</span> と正しく計算されていることがわかる．</p>
 </section>
 <section id="id2">
-<h2>関数<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h2>関数<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p><strong>関数（function）</strong> とは，ある変数 <span class="math notranslate nohighlight">\(x\)</span> について，一つの変数 <span class="math notranslate nohighlight">\(y\)</span> に対応させるものである．</p>
 <div class="math notranslate nohighlight">
 \[
@@ -679,7 +991,7 @@ y = f(x)
 <p>他にもこれまで様々な関数と出会ってきたはずである．また前述したような関数は変数を一つだけ取りうるため一変数関数と呼ばれ，多変数を受け取る多変数関数も考えることができる（後述）．</p>
 <p>以降で，Sympyを使って変数を定義して，関数を定義することを試みる．</p>
 <section id="id3">
-<h3>一変数関数<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h3>一変数関数<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <p>では，定義した<span class="math notranslate nohighlight">\(x\)</span> を使って一変数関数を定義する．一変数関数とは，関数 <span class="math notranslate nohighlight">\(f(\cdot)\)</span> において取りうる変数の数が一つだけの関数を示す．</p>
 <div class="math notranslate nohighlight">
 \[
@@ -723,14 +1035,14 @@ y = f(x)
 <p><code class="docutils literal notranslate"><span class="pre">y</span></code> を <code class="docutils literal notranslate"><span class="pre">symbol</span></code> として定義する必要がある点に注意してほしい．微分方程式を扱う際に，<code class="docutils literal notranslate"><span class="pre">Eq</span></code> を利用するので覚えておこう．</p>
 </section>
 <section id="id4">
-<h3>多変数関数<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<h3>多変数関数<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <p>2以上の正の実数 <span class="math notranslate nohighlight">\(n\)</span> に対して，<span class="math notranslate nohighlight">\(n\)</span> 個の変数 <span class="math notranslate nohighlight">\(x_1, ..., x_n\)</span> を持つ関数　<span class="math notranslate nohighlight">\(f(x_1, x_2, ..., x_n)\)</span> を<strong>多変数関数</strong>と呼ぶ．</p>
 <div class="math notranslate nohighlight">
 \[
 y = f(x_1, x_2, ..., x_n)
 \]</div>
 <p>例えば，以下のような2変数 <span class="math notranslate nohighlight">\(x, y\)</span> を持つ多変数関数 <span class="math notranslate nohighlight">\(f(x, y)\)</span> を考えることができる．</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p><span class="math notranslate nohighlight">\( f(x_1, x_2) = x_{1}^2 + x_{2}^2 \)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\( f(x_1, x_2) = \cos(x_1) + \sin(x_2) \)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\( f(x_1, x_2, x_3) = x_{1}^3 + x_{2}^2 + x_{3} + 1 \)</span></p></li>
@@ -797,10 +1109,10 @@ y = f(x_1, x_2, ..., x_n)
 </div>
 </section>
 <section id="id5">
-<h3>関数のプロット<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<h3>関数のプロット<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
 <p>関数を扱う際，関数がどのような形を持つかを可視化することは理解の助けとなる．一変数関数と多変数関数を可視化しよう．</p>
 <section id="id6">
-<h4>一変数関数のプロット<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<h4>一変数関数のプロット<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h4>
 <p>関数 <span class="math notranslate nohighlight">\(y=x^2+2x+1\)</span> を定義して，定義域を <span class="math notranslate nohighlight">\([-3, 3]\)</span> でプロットする．</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -812,15 +1124,15 @@ y = f(x_1, x_2, ..., x_n)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0e761df20e7e7289bfc9bea2d354301e1fcfeea8cde4b317baa8c3ca074253b3.png" src="../../_images/0e761df20e7e7289bfc9bea2d354301e1fcfeea8cde4b317baa8c3ca074253b3.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x128501d30&gt;
+<img alt="../../_images/function_derivative_and_series_expansion_45_0.png" src="../../_images/function_derivative_and_series_expansion_45_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7fe5ca1507c0&gt;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="id7">
-<h4>二変数関数のプロット<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
+<h4>二変数関数のプロット<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h4>
 <p>関数 <span class="math notranslate nohighlight">\(y=x_1^2+x_2^2+1\)</span> を定義して，<span class="math notranslate nohighlight">\(x_1\)</span> と <span class="math notranslate nohighlight">\(x_2\)</span> のそれぞれの定義域を <span class="math notranslate nohighlight">\([-3, 3]\)</span> でプロットする．</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -833,8 +1145,8 @@ y = f(x_1, x_2, ..., x_n)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/3bc0bc22974988cea7d5a8e651bbfbe2e560a3da6faa4e6ffaf59fd5a13e957e.png" src="../../_images/3bc0bc22974988cea7d5a8e651bbfbe2e560a3da6faa4e6ffaf59fd5a13e957e.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1249e23a0&gt;
+<img alt="../../_images/function_derivative_and_series_expansion_47_0.png" src="../../_images/function_derivative_and_series_expansion_47_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7fe5da77f400&gt;
 </pre></div>
 </div>
 </div>
@@ -842,7 +1154,7 @@ y = f(x_1, x_2, ..., x_n)
 </section>
 </section>
 <section id="function">
-<h3><code class="docutils literal notranslate"><span class="pre">Function</span></code> クラス<a class="headerlink" href="#function" title="Link to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">Function</span></code> クラス<a class="headerlink" href="#function" title="Permalink to this headline">#</a></h3>
 <p>微分方程式では，変数 <code class="docutils literal notranslate"><span class="pre">t</span></code> に依存する未知関数 <code class="docutils literal notranslate"><span class="pre">x(t)</span></code> そのものを定義したい場面がある．その場合，<code class="docutils literal notranslate"><span class="pre">Function</span></code> クラスを使う．</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -876,10 +1188,10 @@ y = f(x_1, x_2, ..., x_n)
 </section>
 </section>
 <section id="id8">
-<h2>微積分<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<h2>微積分<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h2>
 <p>本講義で扱う微分方程式に <strong>微分</strong> という言葉が含まれていることからもわかるように，微分は関数の性質を知る上で非常に重要な役割を持つ．まずは一変数関数から微分の意味を復習する．</p>
 <section id="id9">
-<h3>微分<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<h3>微分<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
 <p>これまでの中学〜大学の講義で微分とは関数の傾き・変化量であると習ったはずである．この関数の傾きを知るために，点 <span class="math notranslate nohighlight">\(x_1\)</span> で関数 <span class="math notranslate nohighlight">\(f\)</span> に接する直線 <span class="math notranslate nohighlight">\(g\)</span> を考える．この直線 <span class="math notranslate nohighlight">\(g\)</span> は<strong>接線</strong>であった．接線の傾きを知るために，ある二点 <span class="math notranslate nohighlight">\(x_1,x_2\)</span>を通る直線の傾きを考える．この傾き <span class="math notranslate nohighlight">\(a\)</span> は以下の式に示すように増加量で計算することができる．</p>
 <div class="math notranslate nohighlight">
 \[
@@ -963,13 +1275,13 @@ g = f(x') +  a (x - x')
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/85df6563030638a8fc9d9a0a6d04cb5f59be81739c9a34b74f173bf26c7cca44.png" src="../../_images/85df6563030638a8fc9d9a0a6d04cb5f59be81739c9a34b74f173bf26c7cca44.png" />
+<img alt="../../_images/function_derivative_and_series_expansion_64_0.png" src="../../_images/function_derivative_and_series_expansion_64_0.png" />
 </div>
 </div>
 <p>色は <code class="docutils literal notranslate"><span class="pre">fig[0].line_color</span> <span class="pre">=</span> <span class="pre">'b'</span></code> のように指定できる．</p>
 </section>
 <section id="id10">
-<h3>偏微分<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<h3>偏微分<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h3>
 <p>多変数関数において，ある入力 <span class="math notranslate nohighlight">\(x_i\)</span> で微分することを <strong>偏微分 (partial differentiation)</strong> と呼ぶ．変数 <span class="math notranslate nohighlight">\(x,y\)</span> を入力として受け取る多変数関数 <span class="math notranslate nohighlight">\(f(x,y)\)</span> の偏微分は以下の式で与えられ，偏微分して得られる関数を <strong>偏導関数 (partial derivative)</strong> と呼ぶ．</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1045,15 +1357,15 @@ g(x, y) = f_x(a, b) (x - a) + f_y(a, b) (y - b) + f(a, b)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/5ab555ac82401d81f9eb8ae16104d9302fb714122284b2682ec7c059fd7b99d1.png" src="../../_images/5ab555ac82401d81f9eb8ae16104d9302fb714122284b2682ec7c059fd7b99d1.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1295587f0&gt;
+<img alt="../../_images/function_derivative_and_series_expansion_74_0.png" src="../../_images/function_derivative_and_series_expansion_74_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7fe5b83cca60&gt;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="derivative">
-<h3><code class="docutils literal notranslate"><span class="pre">Derivative</span></code> クラス<a class="headerlink" href="#derivative" title="Link to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">Derivative</span></code> クラス<a class="headerlink" href="#derivative" title="Permalink to this headline">#</a></h3>
 <p>微分は <code class="docutils literal notranslate"><span class="pre">diff()</span></code> メソッドを呼び出すと計算することができる．一方，微分方程式をプログラミングする際，導関数・偏導関数そのものを定義したい場合がある．このようなときに利用するのが <code class="docutils literal notranslate"><span class="pre">Derivative</span></code> クラスである．次のように利用する．</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1114,7 +1426,7 @@ g(x, y) = f_x(a, b) (x - a) + f_y(a, b) (y - b) + f(a, b)
 </div>
 </section>
 <section id="id11">
-<h3>積分<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<h3>積分<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
 <p>積分を利用することで関数の面積や曲線の長さを計算することができた．積分には積分範囲や被積分関数
 に応じていくつかの種類があるが，ここでは数理解析の講義で必要となる不定積分，定積分，広義積分を復習し，実装する．</p>
 <p>以下の一変数の二次関数を扱う．関数の定義と変数 <span class="math notranslate nohighlight">\(x\)</span> に関する微分を実行する</p>
@@ -1144,7 +1456,7 @@ g(x, y) = f_x(a, b) (x - a) + f_y(a, b) (y - b) + f(a, b)
 </div>
 </div>
 <section id="id12">
-<h4>定積分<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
+<h4>定積分<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h4>
 <p>定積分は与えられた被積分関数 <span class="math notranslate nohighlight">\(f(x)\)</span> について，積分区間 <span class="math notranslate nohighlight">\([a,b]\)</span> でその関数の面積を求める方法であった．以下のように，積分変数 <span class="math notranslate nohighlight">\(dx\)</span> と積分 <span class="math notranslate nohighlight">\(\int\)</span> を使って定積分を書くことができる．</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1166,7 +1478,7 @@ F(x) = \int_{a}^{b} f(x) dx
 </div>
 </section>
 <section id="id13">
-<h4>不定積分<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
+<h4>不定積分<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h4>
 <p>不定積分とは微分すると消える定数 <span class="math notranslate nohighlight">\(C\)</span> を積分定数として，元の被積分関数のすべての原始関数を計算する積分である．そのため，複数の解を持つので注意されたい．</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1187,7 +1499,7 @@ F(x) = \int f(x) dx + C
 </div>
 </section>
 <section id="id14">
-<h4>広義積分<a class="headerlink" href="#id14" title="Link to this heading">#</a></h4>
+<h4>広義積分<a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h4>
 <p>重要な積分として，広義積分がある．広義積分は積分区間が無限大や発散する点を含む場合に用いられる積分であり，フーリエ変換の導出の際に登場する以下のような積分である．</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1227,7 +1539,7 @@ F(x) &amp;= \int_{-\infty}^{b} f(x) dx
 </section>
 </section>
 <section id="integrate">
-<h3><code class="docutils literal notranslate"><span class="pre">Integrate</span></code> クラス<a class="headerlink" href="#integrate" title="Link to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">Integrate</span></code> クラス<a class="headerlink" href="#integrate" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Derivative</span></code> と同様に，積分そのものを定義する際には <code class="docutils literal notranslate"><span class="pre">Integral</span></code> を利用する．</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1258,7 +1570,7 @@ F(x) &amp;= \int_{-\infty}^{b} f(x) dx
 <p>この機能はフーリエ変換で利用する．</p>
 </section>
 <section id="id15">
-<h3>補足：関数の連続性<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<h3>補足：関数の連続性<a class="headerlink" href="#id15" title="Permalink to this headline">#</a></h3>
 <p>関数が連続であるとは，極限 <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a} f(x)\)</span> が　<span class="math notranslate nohighlight">\(f(a)\)</span> に一致すること，つまり，</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1297,10 +1609,10 @@ F(x) &amp;= \int_{-\infty}^{b} f(x) dx
 </section>
 </section>
 <section id="id16">
-<h2>級数展開<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<h2>級数展開<a class="headerlink" href="#id16" title="Permalink to this headline">#</a></h2>
 <p>級数展開はある関数 <span class="math notranslate nohighlight">\(f\)</span> を関数の組み合わせで近似する手法である．本講義ではフーリエ解析の基礎として三角関数によるフーリエ級数展開を紹介する．その理解のために，関数を無限級数で近似するテイラー展開について復習する．</p>
 <section id="id17">
-<h3>テイラー展開<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<h3>テイラー展開<a class="headerlink" href="#id17" title="Permalink to this headline">#</a></h3>
 <p>テイラー展開は，関数を無限級数で近似する手法であり以下のように関数 <span class="math notranslate nohighlight">\(f(x)\)</span> をある点 <span class="math notranslate nohighlight">\(a\)</span> 周りで近似する．ただし，関数が無限回微分可能である必要性がある．</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1337,8 +1649,8 @@ f(x) = f(a) + f'(a)(x-a) + \frac{f''(a)(x-a)^2}{2!} + \frac{f'''(a)(x-a)^3}{3!} 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/57b6450a740277a3645341931a29fe6083920f856437151043fabe21ff66cb50.png" src="../../_images/57b6450a740277a3645341931a29fe6083920f856437151043fabe21ff66cb50.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x129794c70&gt;
+<img alt="../../_images/function_derivative_and_series_expansion_110_0.png" src="../../_images/function_derivative_and_series_expansion_110_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7fe5c9ffb9a0&gt;
 </pre></div>
 </div>
 </div>
@@ -1346,7 +1658,7 @@ f(x) = f(a) + f'(a)(x-a) + \frac{f''(a)(x-a)^2}{2!} + \frac{f'''(a)(x-a)^3}{3!} 
 </section>
 </section>
 <section id="id18">
-<h2>補足：方程式<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<h2>補足：方程式<a class="headerlink" href="#id18" title="Permalink to this headline">#</a></h2>
 <p>方程式を解く方法を紹介する．まず方程式は <code class="docutils literal notranslate"><span class="pre">Eq</span></code> を使って次のように定義できた．</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1415,7 +1727,7 @@ f(x) = f(a) + f'(a)(x-a) + \frac{f''(a)(x-a)^2}{2!} + \frac{f'''(a)(x-a)^3}{3!} 
 <p>方程式が解けていることが確認できる．</p>
 </section>
 <section id="id19">
-<h2>補足：総和<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<h2>補足：総和<a class="headerlink" href="#id19" title="Permalink to this headline">#</a></h2>
 <p>Sympyでは総和も <code class="docutils literal notranslate"><span class="pre">Sum</span></code> を使って定義できる．この機能はフーリエ級数で少し登場する．</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1459,7 +1771,7 @@ f(x) = f(a) + f'(a)(x-a) + \frac{f''(a)(x-a)^2}{2!} + \frac{f'''(a)(x-a)^3}{3!} 
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
+            kernelName: "python3",
             path: "./notebooks/analysis"
         },
         predefinedOutput: true
@@ -1467,134 +1779,50 @@ f(x) = f(a) + f'(a)(x-a) + \frac{f''(a)(x-a)^2}{2!} + \frac{f'''(a)(x-a)^3}{3!} 
     </script>
     <script>kernelName = 'python3'</script>
 
-                </article>
+              </div>
               
-
-              
-              
-              
-              
-                <footer class="prev-next-footer d-print-none">
-                  
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="../introduction.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">数理解析の導入</p>
-      </div>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../introduction.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">数理解析の導入</p>
+        </div>
     </a>
-    <a class="right-next"
-       href="../differential_equations/differential_equations.html"
-       title="next page">
-      <div class="prev-next-info">
+    <a class='right-next' id="next-link" href="../differential_equations/differential_equations.html" title="next page">
+    <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">微分方程式</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sympy">Sympyの基礎</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">関数</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">一変数関数</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">多変数関数</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">関数のプロット</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">一変数関数のプロット</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">二変数関数のプロット</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function"><code class="docutils literal notranslate"><span class="pre">Function</span></code> クラス</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">微積分</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">微分</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">偏微分</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative"><code class="docutils literal notranslate"><span class="pre">Derivative</span></code> クラス</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">積分</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">定積分</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">不定積分</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">広義積分</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrate"><code class="docutils literal notranslate"><span class="pre">Integrate</span></code> クラス</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">補足：関数の連続性</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">級数展開</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">テイラー展開</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">補足：方程式</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">補足：総和</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-By 相澤宏旭（Hiroaki Aizawa）
-</p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-
-  <p class="copyright">
-    
-      © Copyright 2025 (CC BY 4.0).
-      <br/>
-    
-  </p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-</div>
-          </footer>
-        
-
-      </main>
+            </footer>
+        </div>
     </div>
-  </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By 相澤宏旭（Hiroaki Aizawa）<br/>
+  
+      &copy; Copyright 2025 (CC BY 4.0).<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  <footer class="bd-footer">
-  </footer>
+
   </body>
 </html>
