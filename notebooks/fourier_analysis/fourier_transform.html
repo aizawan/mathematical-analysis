@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -459,17 +459,18 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">フーリエ級数の近似区間</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">フーリエ変換</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">フーリエ変換の導出</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">区分求積法からのフーリエ変換の導出</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">フーリエ変換の条件</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">波の重ね合わせ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">具体例</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">直交性からのフーリエ変換の導出</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">波の重ね合わせ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">具体例</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Pythonでフーリエ変換</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">フーリエ変換の性質</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">フーリエ変換の線形性</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">フーリエ変換の導関数の性質</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">フーリエ変換の時刻と周波数のシフト則</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">フーリエ変換の性質</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">フーリエ変換の線形性</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">フーリエ変換の導関数の性質</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">フーリエ変換の時刻と周波数のシフト則</a></li>
 </ul>
 </li>
 </ul>
@@ -510,7 +511,7 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
 </pre></div>
 </div>
 <img alt="../../_images/326db41b581d382263d025dee3957ce5181efe0a0966487ceca162e2f9613fe8.png" src="../../_images/326db41b581d382263d025dee3957ce5181efe0a0966487ceca162e2f9613fe8.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1118340a0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x111a04190&gt;
 </pre></div>
 </div>
 </div>
@@ -532,7 +533,7 @@ f(t) = \frac{1}{2 \pi} \int^{\infty}_{-\infty} F \left ( \omega \right ) e^{i \o
 \]</div>
 <p>で与えられる．</p>
 <section id="id4">
-<h3>フーリエ変換の導出<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<h3>区分求積法からのフーリエ変換の導出<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>では，フーリエ変換と逆フーリエ変換を複素フーリエ級数と複素フーリエ係数から導出する．複素フーリエ級数と複素フーリエ係数は以下で定義されていた．</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -633,7 +634,137 @@ f(t) = \frac{1}{2 \pi} \int^{\infty}_{-\infty} F \left ( \omega \right ) e^{i \o
 \]</div>
 </section>
 <section id="id6">
-<h3>波の重ね合わせ<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<h3>直交性からのフーリエ変換の導出<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>では，フーリエ変換と逆フーリエ変換を複素フーリエ級数と複素フーリエ係数の直交性から導出する．複素フーリエ級数と複素フーリエ係数は以下で定義されていた．</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+f(t) &amp;= \sum_{k=-\infty}^{\infty} C_k e^{ik \omega_0 t} \\
+C_k &amp;= \frac{1}{T}\int^{T/2}_{-T/2} f\left ( t \right ) e^{-ik\omega_0 t} dt
+\end{align}
+\end{split}\]</div>
+<p>この複素フーリエ級数の関数系は <span class="math notranslate nohighlight">\(\{e^{ik\omega_0 t}|k\in\mathbb{Z}\}\)</span> であった．ここで，より連続的な周波数をもつ <span class="math notranslate nohighlight">\(\omega\)</span> に関する関数系 <span class="math notranslate nohighlight">\(\{e^{i\omega t}|\omega\in\mathbb{R}\}\)</span> を考える．この関数系の要素 <span class="math notranslate nohighlight">\(e^{i\omega_1 t}\)</span> と <span class="math notranslate nohighlight">\(e^{i\omega_2 t}\)</span> について，内積</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{-\infty}^{\infty}\ f(x) \overline{g(x)} dx= 0
+\]</div>
+<p>が成り立つことを確認する．具体的に，</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\int_{-\infty}^{\infty} e^{i\omega_1 t} \overline{e^{i\omega_2 t}} dt &amp;= \int_{-\infty}^{\infty} e^{i\omega_1 t} e^{-i\omega_2 t} dt \\
+&amp;= \int_{-\infty}^{\infty} e^{i (\omega_1-\omega_2) t} dt \\
+&amp;= 2 \pi \delta (\omega_1-\omega_2)
+\end{align}
+\end{split}\]</div>
+<p>ここで <span class="math notranslate nohighlight">\(\delta\)</span> は <strong>ディラックのデルタ関数</strong> とよばれる超関数である．</p>
+<div class="admonition- admonition">
+<p class="admonition-title">デルタ関数</p>
+<p>デルタ関数は任意の連続関数 <span class="math notranslate nohighlight">\(f(x)\)</span> に対して</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{-\infty}^{\infty} f(x) \delta(x) dx = f(0)
+\]</div>
+<p>を満たす関数のことをいう．ここで <span class="math notranslate nohighlight">\(\delta(x)=0, x\neq 0\)</span> であり，デルタ関数自身を積分すると</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{-\infty}^{\infty} \delta(x) dx = 1
+\]</div>
+<p>となる．このほか，デルタ関数には平行移動に関する性質</p>
+<div class="math notranslate nohighlight">
+\[
+\delta(x - a) = 0, (x \neq a)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\int_{-\infty}^{\infty} f(x) \delta(x - a) dx = f(a)
+\]</div>
+<p>や，フーリエ変換に関する性質</p>
+<div class="math notranslate nohighlight">
+\[
+\delta(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} e^{i\omega x} d\omega
+\]</div>
+<p>を持つ．</p>
+</div>
+<p>これを利用して上記の内積の式が得られている．さらに，<span class="math notranslate nohighlight">\(\omega_1 -\omega_2 \neq 0\)</span> ならば，</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+\int_{-\infty}^{\infty} e^{i\omega_1 t} \overline{e^{i\omega_2 t}} dt = 2 \pi \delta (\omega_1-\omega_2) = 0
+\end{align}
+\]</div>
+<p>であり，直交関数系であることもわかる．これより，<span class="math notranslate nohighlight">\(k\omega\)</span> という整数倍の周波数を連続値 <span class="math notranslate nohighlight">\(\omega\)</span> で基底を作れたことになる．</p>
+<p>これにしたがって，複素フーリエ級数</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+f(t) &amp;= \sum_{k=-\infty}^{\infty} C_k e^{ik \omega_0 t}
+\end{align}
+\]</div>
+<p>は <span class="math notranslate nohighlight">\(k \omega\)</span> が連続値になったことより，総和を積分に修正する必要がある．つまり，</p>
+<div class="math notranslate nohighlight">
+\[
+f(t) = \int_{-\infty}^{\infty} G(\omega) e^{i\omega t} d\omega
+\]</div>
+<p>である．これまでの直交性からの導出と同じように両辺に <span class="math notranslate nohighlight">\(e^{-i\omega t}\)</span> をかける．ただし，積分の <span class="math notranslate nohighlight">\(\omega\)</span> とこのかける <span class="math notranslate nohighlight">\(\omega\)</span> は別の変数であるので次のように変数名を変えておく．</p>
+<div class="math notranslate nohighlight">
+\[
+f(t)e^{-i\omega t} = \left\{\int_{-\infty}^{\infty} G(s) e^{is t} ds\right\} e^{-i\omega t}
+\]</div>
+<p>次に，両辺を積分する．</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\int_{-\infty}^{\infty}f(t)e^{-i\omega t}dt &amp;= \int_{-\infty}^{\infty}\left\{\int_{-\infty}^{\infty} G(s) e^{is t} ds\right\} e^{-i\omega t}dt \\
+&amp;= \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} G(s) e^{is t} e^{-i\omega t} dt ds\\
+&amp;= \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} G(s) e^{i (s - \omega) t} dt ds\\
+&amp;= \int_{-\infty}^{\infty} G(s) \left\{\int_{-\infty}^{\infty}  e^{i (s - \omega) t} dt \right\} ds \\
+&amp;= \int_{-\infty}^{\infty} G(s) \delta (s - \omega) ds \\
+&amp;= 2 \pi G(\omega)
+\end{align}
+\end{split}\]</div>
+<p>よって，</p>
+<div class="math notranslate nohighlight">
+\[
+G(\omega) = \frac{1}{2\pi} \int_{-\infty}^{\infty}f(t)e^{-i\omega t}dt
+\]</div>
+<p>ここで，</p>
+<div class="math notranslate nohighlight">
+\[
+F(\omega) = 2 \pi G(\omega)
+\]</div>
+<p>とすると，</p>
+<div class="math notranslate nohighlight">
+\[
+F(\omega) = \int_{-\infty}^{\infty}f(t)e^{-i\omega t}dt
+\]</div>
+<p>が得られ，これが関数 <span class="math notranslate nohighlight">\(f(t)\)</span> の <strong>フーリエ変換</strong> となる．また，</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+f(t) &amp;= \int_{-\infty}^{\infty} G(\omega) e^{i\omega t} d\omega \\
+&amp;= \frac{1}{2\pi}\int_{-\infty}^{\infty} F(\omega) e^{i\omega t} d\omega
+\end{align}
+\end{split}\]</div>
+<p>が得られ，これは <strong>逆フーリエ変換</strong> といわれる．</p>
+<div class="admonition- admonition">
+<p class="admonition-title">二重積分の順序を入れ替えるときの注意</p>
+<p>上記の導出では，次のように二重積分の順序を入れ替えている：</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{-\infty}^{\infty} \left\{ \int_{-\infty}^{\infty} G(s) e^{i s t} ds \right\} e^{-i\omega t} dt
+= \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} G(s) e^{i (s - \omega) t} dt ds
+\]</div>
+<p>このように積分の順序を入れ替えるためには，関数の <strong>絶対可積分性</strong> が必要となる．</p>
+<div class="math notranslate nohighlight">
+\[
+\iint_{\mathbb{R}^2} \left| G(s) e^{i(s - \omega)t} \right| dt ds &lt; \infty
+\]</div>
+<p>が満たされていれば，積分の順序を入れ替えても良い．これは区分求積法と同等の条件である．</p>
+</div>
+</section>
+<section id="id7">
+<h3>波の重ね合わせ<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>フーリエ級数展開，複素フーリエ級数展開，フーリエ変換はすべて時刻 <span class="math notranslate nohighlight">\(t\)</span> に関する関数 <span class="math notranslate nohighlight">\(f(t)\)</span> を異なる周波数 <span class="math notranslate nohighlight">\(\omega\)</span> の波の重ね合わせで表現することを試みている．複素フーリエ級数とフーリエ変換を見比べてみると</p>
 <p><strong>複素フーリエ級数展開</strong></p>
 <div class="math notranslate nohighlight">
@@ -648,8 +779,8 @@ f(t) = \frac{1}{2 \pi} \int^{\infty}_{-\infty} F \left ( \omega \right ) e^{i \o
 \]</div>
 <p>となり，これらのフーリエ解析方法は変換後の周波数の扱いが整数倍であるか？それとも連続的に定義されているか？の違いで区別される．そして，周波数 <span class="math notranslate nohighlight">\(\omega\)</span> に関する情報はフーリエ級数の場合は <strong>離散スペクトル</strong> ，フーリエ変換の場合は <strong>連続スペクトル</strong> と呼ばれる</p>
 </section>
-<section id="id7">
-<h3>具体例<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<section id="id8">
+<h3>具体例<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>では，以下の関数をフーリエ変換しよう．</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -704,7 +835,7 @@ F \left ( \omega \right ) &amp;= \int^{\infty}_{-\infty} f\left ( t \right ) e^{
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/f4ad5902e209fc7ac5f935e171f9f702fd823f02d9c6223a6913618eb71a04e4.png" src="../../_images/f4ad5902e209fc7ac5f935e171f9f702fd823f02d9c6223a6913618eb71a04e4.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x10fb61dc0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x10fd35280&gt;
 </pre></div>
 </div>
 </div>
@@ -733,7 +864,7 @@ F \left ( \omega \right ) &amp;= \int^{\infty}_{-\infty} f\left ( t \right ) e^{
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/d0816d85a50adc401e9f90cec1e3a6b9ea432239fe3818f78dc542119f891b61.png" src="../../_images/d0816d85a50adc401e9f90cec1e3a6b9ea432239fe3818f78dc542119f891b61.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x128c19b80&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x128ec4df0&gt;
 </pre></div>
 </div>
 </div>
@@ -761,18 +892,18 @@ F \left ( \omega \right ) &amp;= \int^{\infty}_{-\infty} f\left ( t \right ) e^{
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/f4ad5902e209fc7ac5f935e171f9f702fd823f02d9c6223a6913618eb71a04e4.png" src="../../_images/f4ad5902e209fc7ac5f935e171f9f702fd823f02d9c6223a6913618eb71a04e4.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x128e12a30&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x129052370&gt;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="id8">
-<h2>フーリエ変換の性質<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
-<p>フーリエ変換には微分方程式の適用や周波数解析において役立つ性質がいくつかある．</p>
 <section id="id9">
-<h3>フーリエ変換の線形性<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<h2>フーリエ変換の性質<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>フーリエ変換には微分方程式の適用や周波数解析において役立つ性質がいくつかある．</p>
+<section id="id10">
+<h3>フーリエ変換の線形性<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <p>関数 <span class="math notranslate nohighlight">\(f(t)\)</span> から周波数に関する関数 <span class="math notranslate nohighlight">\(F(\omega)\)</span> を得るフーリエ変換を <span class="math notranslate nohighlight">\(\mathcal{F}(f(t))\)</span> とする．</p>
 <div class="math notranslate nohighlight">
 \[
@@ -812,8 +943,8 @@ F \left ( \omega \right ) = \mathcal{F}(f(t)) = \int^{\infty}_{-\infty} f\left (
 \end{split}\]</div>
 </div>
 </section>
-<section id="id10">
-<h3>フーリエ変換の導関数の性質<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<section id="id11">
+<h3>フーリエ変換の導関数の性質<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <p>関数 <span class="math notranslate nohighlight">\(f(t)\)</span> のフーリエ変換 <span class="math notranslate nohighlight">\(\mathcal{F}(f(t))\)</span> と関数 <span class="math notranslate nohighlight">\(f(t)\)</span> の￼<span class="math notranslate nohighlight">\(n\)</span> 次導関数 <span class="math notranslate nohighlight">\(f^{(n)}(t)\)</span> には以下の関係がある．</p>
 <div class="math notranslate nohighlight">
 \[
@@ -834,8 +965,8 @@ F \left ( \omega \right ) = \mathcal{F}(f(t)) = \int^{\infty}_{-\infty} f\left (
 <p>第二行目では絶対可積分の条件 <span class="math notranslate nohighlight">\(f(\pm \infty)=0\)</span> を利用している．これを <span class="math notranslate nohighlight">\(f'(t), f''(t),\ldots\)</span> と計算すると導関数の性質を導出できる．</p>
 </div>
 </section>
-<section id="id11">
-<h3>フーリエ変換の時刻と周波数のシフト則<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<section id="id12">
+<h3>フーリエ変換の時刻と周波数のシフト則<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <p><strong>フーリエ変換の時刻のシフト則</strong></p>
 <p>関数 <span class="math notranslate nohighlight">\(f(t)\)</span> を <span class="math notranslate nohighlight">\(t_0\)</span> だけ平行移動した関数 <span class="math notranslate nohighlight">\(f(t-t_0)\)</span> のフーリエ変換は次の性質がある．</p>
 <div class="math notranslate nohighlight">
@@ -943,17 +1074,18 @@ F \left ( \omega \right ) = \mathcal{F}(f(t)) = \int^{\infty}_{-\infty} f\left (
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">フーリエ級数の近似区間</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">フーリエ変換</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">フーリエ変換の導出</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">区分求積法からのフーリエ変換の導出</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">フーリエ変換の条件</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">波の重ね合わせ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">具体例</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">直交性からのフーリエ変換の導出</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">波の重ね合わせ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">具体例</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Pythonでフーリエ変換</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">フーリエ変換の性質</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">フーリエ変換の線形性</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">フーリエ変換の導関数の性質</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">フーリエ変換の時刻と周波数のシフト則</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">フーリエ変換の性質</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">フーリエ変換の線形性</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">フーリエ変換の導関数の性質</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">フーリエ変換の時刻と周波数のシフト則</a></li>
 </ul>
 </li>
 </ul>
