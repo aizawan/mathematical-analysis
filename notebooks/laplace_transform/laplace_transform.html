@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -574,10 +574,10 @@ f(t)=\frac{1}{2 \pi i} \int_{c-i \infty}^{c+i \infty} F(s) e^{s t} d s, \quad t 
 \[\begin{split}
 f'(t)=\begin{cases}f(t)e^{-ct} &amp; 0 \leq t \\ 0 &amp; t&lt;0\end{cases}
 \end{split}\]</div>
-<p><span class="math notranslate nohighlight">\(f'(t)\)</span> のフーリエ変換 <span class="math notranslate nohighlight">\(F'(\omega)\)</span> と逆フーリエ変換は以下で与えられる．</p>
+<p><span class="math notranslate nohighlight">\(f'(t)\)</span> の逆フーリエ変換は以下で与えられる．</p>
 <div class="math notranslate nohighlight">
 \[
-F^{\prime}(\omega)=\int_{-\infty}^{\infty} f^{\prime}(t) e^{-i \omega t} d t = \int_{0}^{\infty} f(t) e^{-(c+i \omega) t} d t, \quad f^{\prime}(t)=\frac{1}{2 \pi} \int_{-\infty}^{\infty} F^{\prime}(\omega) e^{i \omega t} d \omega
+f^{\prime}(t)=\frac{1}{2 \pi} \int_{-\infty}^{\infty} F^{\prime}(\omega) e^{i \omega t} d \omega
 \]</div>
 <p>このとき，<span class="math notranslate nohighlight">\(f'(t)\)</span> は <span class="math notranslate nohighlight">\(t \geq 0\)</span> で <span class="math notranslate nohighlight">\(f(t)e^{-ct}\)</span> であるので逆フーリエ変換は以下のようになる．</p>
 <div class="math notranslate nohighlight">
@@ -592,7 +592,7 @@ f(t) e^{-ct} \cdot e^{c t}&amp;=\frac{1}{2 \pi} \int_{-\infty}^{\infty} F^{\prim
 &amp;=\frac{1}{2 \pi} \int_{-\infty}^{\infty} F^{\prime}(\omega) e^{(c+i \omega) t} d \omega
 \end{align}
 \end{split}\]</div>
-<p><span class="math notranslate nohighlight">\(s=c+i\omega\)</span> で変数変換をすると</p>
+<p><span class="math notranslate nohighlight">\(s=c+i\omega\)</span> で変数変換をすると，<span class="math notranslate nohighlight">\(ds / d\omega = i\)</span> より，</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
@@ -925,7 +925,7 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
 </pre></div>
 </div>
 <img alt="../../_images/5dc1d86d8baf4ca88f1ecac2ba0d5c397312770c5e4f6bb21bc7f3b8fbaf1ce9.png" src="../../_images/5dc1d86d8baf4ca88f1ecac2ba0d5c397312770c5e4f6bb21bc7f3b8fbaf1ce9.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x1111cdc70&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x111449f40&gt;
 </pre></div>
 </div>
 </div>
@@ -967,7 +967,7 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/b224ab74b08522c3e3d28bc8c79a38d39fb908d6b9fd383e09929556a35e9f05.png" src="../../_images/b224ab74b08522c3e3d28bc8c79a38d39fb908d6b9fd383e09929556a35e9f05.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x129df3fa0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x12a1171f0&gt;
 </pre></div>
 </div>
 </div>
@@ -998,7 +998,7 @@ f(t)= \begin{cases}1 &amp; 0 \leq t \\ 0 &amp; t&lt;0\end{cases}
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/0bd13b5b417eabb0fdeaaf8f59cfa1a08a2a871aa74923bac6a11f88fe98fc34.png" src="../../_images/0bd13b5b417eabb0fdeaaf8f59cfa1a08a2a871aa74923bac6a11f88fe98fc34.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x129bd7400&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.backends.matplotlibbackend.matplotlib.MatplotlibBackend at 0x129f00f70&gt;
 </pre></div>
 </div>
 </div>
