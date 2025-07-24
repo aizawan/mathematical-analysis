@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -533,23 +533,27 @@ y_2''(x)+ay_2'(x)+by_2(x) &amp;= 0
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned} &amp;y''+ay'+by \\
-&amp; \quad = C_1'(x)y_1(x)+C_2'(x)y_2(x) \\
-&amp; \qquad +  2\left(C_1'(x)y_1'(x)+C_2'(x)y_2'(x)\right) \\ 
-&amp; \qquad + C_1''(x)y_1(x)+C_2''(x)y_2(x)
+&amp; \quad = C_1'(x)y_1(x)+C_2'(x)y_2(x) +  2\left(C_1'(x)y_1'(x)+C_2'(x)y_2'(x)\right) + C_1''(x)y_1(x)+C_2''(x)y_2(x)
 \end{aligned}
 \end{split}\]</div>
-<p>ここで，一項目の<span class="math notranslate nohighlight">\(C_1'(x)y_1(x)+C_2'(x)y_2(x)\)</span>が恒等的に<span class="math notranslate nohighlight">\(0\)</span>となることを満たすような<span class="math notranslate nohighlight">\(C_1(x),C_2(x)\)</span>を設計することを考える．理由はこの項をさらに微分するとわかる．</p>
+<p>ここで，一項目の<span class="math notranslate nohighlight">\(C_1'(x)y_1(x)+C_2'(x)y_2(x)\)</span>が恒等的に<span class="math notranslate nohighlight">\(0\)</span>となる補助的な条件を満たすような<span class="math notranslate nohighlight">\(C_1(x),C_2(x)\)</span>を設計することを考える．つまりは，</p>
 <div class="math notranslate nohighlight">
 \[
-C_1'(x)y_1'(x)+C_2'(x)y_2'(x)+C_1''(x)y_1(x)+C_2''(x)y_2(x)\equiv 0\]</div>
-<p>であり，これを代入すると右辺がきれいになりそうである．このとき，<span class="math notranslate nohighlight">\(C_1'(x)y_1(x)+C_2'(x)y_2(x)\equiv 0\)</span>の条件とともに<span class="math notranslate nohighlight">\(y''+ay'+by\)</span>の形と見比べると，</p>
+C_1'(x)y_1(x)+C_2'(x)y_2(x) \equiv 0
+\]</div>
+<p>である．このような条件を導入する理由としては，この項をさらに微分すると</p>
+<div class="math notranslate nohighlight">
+\[
+C_1'(x)y_1'(x)+C_2'(x)y_2'(x)+C_1''(x)y_1(x)+C_2''(x)y_2(x) = 0
+\]</div>
+<p>となり，これを <span class="math notranslate nohighlight">\(C_1'(x)y_1(x)+C_2'(x)y_2(x)\equiv 0\)</span>の条件とともに<span class="math notranslate nohighlight">\(y''+ay'+by\)</span> に代入すると，</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{aligned}
 y''+ay'+by = C_1'(x)y_1'(x)+C_2'(x)y_2'(x) = g(x)
 \end{aligned}
 \]</div>
-<p>であることがわかる(代入してみると良い)．つまり定数変換法で考えた <span class="math notranslate nohighlight">\(y=C_1(x)y_1(x) + C_2(x)y_2(x)\)</span> が一般解であるためには，以下の条件が満たされていればいいことがわかる．</p>
+<p>が得られ，2階微分の項 <span class="math notranslate nohighlight">\(C_1'', C_2''(x)\)</span> を含まない形で整理できる．つまり定数変換法で考えた <span class="math notranslate nohighlight">\(y=C_1(x)y_1(x) + C_2(x)y_2(x)\)</span> が一般解であるためには，以下の条件が満たされていればいいことがわかる．</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}

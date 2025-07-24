@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -509,6 +509,107 @@ y=C_1y_1 + C_2y_2
 \]</div>
 <p><span class="math notranslate nohighlight">\(C_1,C_2\)</span>は積分定数であり，この一般解は基本解 <span class="math notranslate nohighlight">\(y_1,y_2\)</span> の線型結合であることがわかる．これは微分方程式の線形性から得られる性質（<strong>重ね合わせの原理</strong>）である．</p>
 <p>しかしながら，このような基本解は一般的に求めることができない．ここでは，<span class="math notranslate nohighlight">\(p(x),q(x)\)</span>が定数であるときの二階定数係数線形微分方程式についてのみ紹介する．</p>
+<div class="admonition- admonition">
+<p class="admonition-title">重ね合わせの原理の証明</p>
+<p>表記を簡略化するために，<span class="math notranslate nohighlight">\(\frac{d^2y}{dx^2} = y''\)</span>，<span class="math notranslate nohighlight">\(\frac{dy}{dx}=y'\)</span> とすると，二階線形同次微分方程式は</p>
+<div class="math notranslate nohighlight">
+\[
+y'' + p(x)y' + q(x)y = 0
+\]</div>
+<p>と書ける．ここで，この微分方程式の解空間を</p>
+<div class="math notranslate nohighlight">
+\[
+V = \{y | y'' + p(x)y' + q(x)y = 0 \}
+\]</div>
+<p>とする．この <span class="math notranslate nohighlight">\(V\)</span> に含まれる二つの関数 <span class="math notranslate nohighlight">\(y_1, y_2\)</span> と <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span> について，</p>
+<div class="math notranslate nohighlight">
+\[
+u = y_1 + y_2, \quad v = k y_1
+\]</div>
+<p>の <span class="math notranslate nohighlight">\(u, v\)</span> が <span class="math notranslate nohighlight">\(V\)</span> に含まれることを証明する．</p>
+<p>まず，<span class="math notranslate nohighlight">\(y_1, y_2\)</span> はともに微分方程式の解であるので，</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; y_1''+p(x) y_1'+q(x) y_1=0 \\
+&amp; y_2''+p(x) y_2'+q(x) y_2=0
+\end{aligned}
+\end{split}\]</div>
+<p>である．両辺を足すと</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\left(y_1''+y_2''\right)+p(x)\left(y_1'+y_2'\right)+q(x)\left(y_1+y_2\right)&amp;=0 \\
+\left(y_1+y_2\right)''+p(x)\left(y_1+y_2\right)'+q(x)\left(y_1+y_2\right)&amp;=0
+\end{aligned}
+\end{split}\]</div>
+<p>ここで，<span class="math notranslate nohighlight">\(u=y_1 + y_2\)</span> より，</p>
+<div class="math notranslate nohighlight">
+\[
+u''+p(x)u'+q(x)u=0
+\]</div>
+<p>ゆえに，<span class="math notranslate nohighlight">\(u\)</span> もまた微分方程式の解となるので <span class="math notranslate nohighlight">\(u \in V\)</span> である．</p>
+<p>続いて，任意定数 <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span> 倍すると，</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+k y_1''+k p(x) y_1'+k q(x) y_1&amp;=0\\
+\left(k y_1\right)''+p(x)\left(k y_1\right)'+q(x)\left(k y_1\right)&amp;=0
+\end{aligned}
+\end{split}\]</div>
+<p>ここで，<span class="math notranslate nohighlight">\(v = ky_1\)</span> より，</p>
+<div class="math notranslate nohighlight">
+\[
+v''+p(x)v'+q(x)v=0
+\]</div>
+<p>ゆえに，<span class="math notranslate nohighlight">\(v\)</span> もまた微分方程式の解となるので <span class="math notranslate nohighlight">\(v \in V\)</span> である．したがって，重ね合わせの原理が示せる．</p>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">微分方程式の解と線形空間</p>
+<p>微分方程式の解空間</p>
+<div class="math notranslate nohighlight">
+\[
+V = \{y | y'' + p(x)y' + q(x)y = 0 \}
+\]</div>
+<p>は前述の関数の和とスカラー倍に関して閉じており，線形空間（ベクトル空間）である．これは解の和とスカラー倍の性質から示される．</p>
+<p>さらに，微分方程式の解空間が線形空間であることを考えると</p>
+<ul class="simple">
+<li><p>解の線形独立性，つまり，<span class="math notranslate nohighlight">\(y_1, y_2\)</span> が線形独立なら <strong>基底</strong> となる</p></li>
+<li><p>解空間の基底と次元，つまり，<span class="math notranslate nohighlight">\(y=C_1y_1 + C_2y_2\)</span> を考えると2次元の線形空間
+を定義することができ，一般解の表現</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+y=C_1y_1 + C_2y_2
+\]</div>
+<p>は，線形代数の視点でみると，線形空間 <span class="math notranslate nohighlight">\(V\)</span> の基底 <span class="math notranslate nohighlight">\(y_1, y_2\)</span> による任意の元の表現に対応する．</p>
+<p>2つの関数 <span class="math notranslate nohighlight">\(y_1(x), y_2(x)\)</span> の線形独立性を調べるためは，<strong>ロンスキー行列式</strong> と呼ばれる行列式を用いる方法がある．</p>
+<p>ロンスキー行列式は以下のように定義される</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+W(y_1, y_2)(x) = 
+\begin{vmatrix}
+y_1(x) &amp; y_2(x) \\
+y_1'(x) &amp; y_2'(x)
+\end{vmatrix}
+= y_1(x) y_2'(x) - y_1'(x) y_2(x)
+\end{split}\]</div>
+<p>ここで，<span class="math notranslate nohighlight">\(W(x) \equiv 0\)</span> なら，<span class="math notranslate nohighlight">\(y_1, y_2\)</span> は線形従属であり，<span class="math notranslate nohighlight">\(W(x_0) \neq 0\)</span> なら，<span class="math notranslate nohighlight">\(y_1, y_2\)</span> はその区間で線形独立であるといえる．そして，線形独立であるならば，<span class="math notranslate nohighlight">\(y_1, y_2\)</span> は解空間の基底となり，これを <strong>基本解</strong> という．</p>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">関数の線形独立</p>
+<p>関数 <span class="math notranslate nohighlight">\(y_1(x), y_2(x), \dots, y_n(x)\)</span> が定義域 <span class="math notranslate nohighlight">\(I\)</span> 上で <strong>線形独立</strong> であるとは</p>
+<div class="math notranslate nohighlight">
+\[
+C_1 y_1(x) + C_2 y_2(x) + \cdots + C_n y_n(x) = 0 \quad (\forall x \in I)
+\]</div>
+<p>を満たす係数 <span class="math notranslate nohighlight">\(C_1, \dots, C_n\)</span> に対して、</p>
+<div class="math notranslate nohighlight">
+\[
+C_1 = C_2 = \cdots = C_n = 0
+\]</div>
+<p>のみが成り立つ場合をいう．</p>
+</div>
 </section>
 </section>
 <section id="id5">
@@ -571,6 +672,16 @@ y = \left ( C_1 x + C_2\right )e^{\lambda_{\alpha}x}
 y=e^{px} \left( C_1 \cos qx + C_2 \sin qx \right)
 \]</div>
 <p>このとき，<span class="math notranslate nohighlight">\(C_1,C_2\)</span>は積分定数であり，<span class="math notranslate nohighlight">\(i\)</span> は虚数単位，<span class="math notranslate nohighlight">\(p,q\)</span>は0以外の実数である．</p>
+<div class="admonition- admonition">
+<p class="admonition-title">基本解と特性方程式</p>
+<p>前述したように，微分方程式の解空間は線形空間であり，基本解（基底）を求めることでその解空間全体を表現することができる．基本解は無数にあるので一意に定まるものではなく，線形独立な2つの解が与えられれば，それらは基底となる．二階定数係数線形同次微分方程式では，基本解となるよう，つまりは線形独立となるように解を仮定している．</p>
+<p>また，1階線形非同次微分方程式 <span class="math notranslate nohighlight">\(y' + p(x)y = q(x)\)</span> の解法において現れる定数変化法の仮定</p>
+<div class="math notranslate nohighlight">
+\[
+y(x) = C(x) e^{-\int p(x)\,dx}
+\]</div>
+<p>も，まず対応する同次方程式の解 <span class="math notranslate nohighlight">\(y(x) = e^{-\int p(x)\,dx}\)</span> を基本解として得た上で，その係数を定数から関数へと変化させることで非同次項に対応しようとする手法である．したがって，定数変化法においても，まず基本解を用意することが前提となっており，その解が零でないことや線形独立性を満たすことが重要となる．</p>
+</div>
 </section>
 <section id="id7">
 <h3>具体例（二つの異なる実根の場合）<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
