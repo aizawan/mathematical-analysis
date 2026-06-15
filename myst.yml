@@ -1,0 +1,65 @@
+version: 1
+project:
+  title: 数理解析
+  # authors:
+  #   - name:
+  #       literal: 相澤宏旭
+  copyright: "2025"
+  license: CC-BY-4.0
+  github: https://github.com/aizawan/mathematical-analysis
+  bibliography:
+    - references.bib
+  toc:
+    - file: intro.md
+    - title: はじめに
+      children:
+        - file: notebooks/introduction.ipynb
+    - title: 微積分
+      children:
+        - file: notebooks/analysis/function_derivative_and_series_expansion.ipynb
+    - title: 微分方程式
+      children:
+        - file: notebooks/differential_equations/differential_equations.ipynb
+        - file: notebooks/differential_equations/direct_integration_method.ipynb
+        - file: notebooks/differential_equations/separation_of_variables_method.ipynb
+        - file: notebooks/differential_equations/homogeneous_differential_equation.ipynb
+        - file: notebooks/differential_equations/first-order_linear_homogeneous_differential_equation.ipynb
+        - file: notebooks/differential_equations/first-order_linear_nonhomogeneous_differential_equation.ipynb
+        - file: notebooks/differential_equations/Bernoulli_differential_equation.ipynb
+        - file: notebooks/differential_equations/Clairaut's_differential_equation.ipynb
+        - file: notebooks/differential_equations/exact_differential_equation.ipynb
+        - file: notebooks/differential_equations/second-order_constant_coefficient_linear_homogeneous_differential_equation.ipynb
+        - file: notebooks/differential_equations/second-order_constant_coefficient_linear_nonhomogeneous_differential_equation.ipynb
+        # - file: notebooks/differential_equations/physics-informed_neural_network.ipynb
+    - title: フーリエ解析
+      children:
+        - file: notebooks/fourier_analysis/periodic_function.ipynb
+        - file: notebooks/fourier_analysis/orthogonal_function.ipynb
+        - file: notebooks/fourier_analysis/inner_product_space.ipynb
+        - file: notebooks/fourier_analysis/fourier_series_expansion.ipynb
+        - file: notebooks/fourier_analysis/fourier_series_expansion_angular_frequency.ipynb
+        - file: notebooks/fourier_analysis/complex_fourier_series_expansion.ipynb
+        - file: notebooks/fourier_analysis/fourier_transform.ipynb
+        - file: notebooks/fourier_analysis/fourier_analysis_and_differential_equations.ipynb
+    - title: ラプラス変換
+      children:
+        - file: notebooks/laplace_transform/laplace_transform.ipynb
+        - file: notebooks/laplace_transform/laplace_transform_and_differential_equations.ipynb
+    - title: 数値解析
+      children:
+        - file: notebooks/numerical_analysis/numerical_analysis.ipynb
+        - file: notebooks/numerical_analysis/euler_method.ipynb
+        - file: notebooks/numerical_analysis/heun_method.ipynb
+        - file: notebooks/numerical_analysis/midpoint_method.ipynb
+        - file: notebooks/numerical_analysis/runge-kutta_method.ipynb
+    - title: 補足情報
+      children:
+        - file: advanced_materials.md
+site:
+  template: book-theme
+  title: 数理解析
+  options:
+    logo: icon.png
+  actions:
+    - title: GitHub
+      url: https://github.com/aizawan/mathematical-analysis

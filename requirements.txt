@@ -1,3 +1,9 @@
-jupyter-book
+jupyter-book>=2
 matplotlib
 numpy
+notebook
+jupyter-server
+ipykernel
+sympy
+torch
+ghp-import
