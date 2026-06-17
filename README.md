@@ -100,21 +100,21 @@ uv run jupyter book clean --execute
 uv run jupyter book build --html --execute --execute-parallel 1
 ```
 
-ビルドが途中で進まない場合は，まず逐次実行でどの Notebook で止まっているかを確認します．
-
-```bash
-uv run jupyter book clean --execute
-uv run jupyter book build --html --execute --execute-parallel 1
-```
-
-`--execute-parallel 1` を付けると Notebook を1つずつ実行するため，ログ上で止まっているファイルを特定しやすくなります．問題のある Notebook を Jupyter Notebook で直接開き，`Restart Kernel and Run All Cells` で同じ箇所が止まるか確認してください．
-
 ## Jupyter Book の公開
 
 GitHub Pages に手動で公開する場合は，`ghp-import` を使ってビルド済み HTML を `gh-pages` ブランチへ反映します．
+このリポジトリは `https://aizawan.github.io/mathematical-analysis/` のようにサブディレクトリで公開されるため，公開用ビルドでは `BASE_URL=/mathematical-analysis` を指定してください．指定しないと，CSS や JavaScript の参照先がずれて，GitHub Pages 上で正しく表示されません．
+
+公開用ビルドから `gh-pages` への反映までまとめて実行する場合は，次のスクリプトを使います．
 
 ```bash
-uv run jupyter book build --html --execute --execute-parallel 1
+./scripts/publish-pages.sh
+```
+
+手動で実行する場合は，次のように `BASE_URL` を付けてビルドします．
+
+```bash
+BASE_URL=/mathematical-analysis uv run jupyter book build --html --execute --execute-parallel 1
 uv run ghp-import -n -p -f _build/html
 ```
 
@@ -134,6 +134,7 @@ uv run ghp-import -n -p -f _build/html
 初回公開時は，GitHub の repository settings で Pages の公開元を確認してください．`ghp-import` を使う場合は，通常 `gh-pages` ブランチを公開元にします．
 
 継続的に公開する場合は，GitHub Actions で `jupyter book build --html --execute --execute-parallel 1` を実行し，`_build/html` を GitHub Pages に deploy する方法もあります．手元の MacBook から必要なときだけ公開する場合は，`ghp-import` で十分です．
+GitHub Actions でビルドする場合も，ビルドステップに `BASE_URL=/mathematical-analysis` を設定してください．
 
 ## PyTorch について
 
