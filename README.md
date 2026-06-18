@@ -118,11 +118,12 @@ BASE_URL=/mathematical-analysis uv run jupyter book build --html --execute --exe
 uv run ghp-import -n -p -f _build/html
 ```
 
-`ghp-import` は `requirements.txt` に含めています．個別にインストールしてから実行する場合は，次のようにします．
+`deploy-pages.sh` は，`BASE_URL=/mathematical-analysis` を設定してビルドし，`_build/html` を `gh-pages` ブランチへ push します．
+`ghp-import` は `requirements.txt` に含めています．見つからない場合は，依存関係をインストールしてから再実行してください．
 
 ```bash
-uv pip install ghp-import
-uv run ghp-import -n -p -f _build/html
+uv pip install -r requirements.txt
+./scripts/deploy-pages.sh
 ```
 
 各オプションの意味は次の通りです．
