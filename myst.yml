@@ -37,6 +37,7 @@ project:
         - file: notebooks/fourier_analysis/orthogonal_function.ipynb
         - file: notebooks/fourier_analysis/inner_product_space.ipynb
         - file: notebooks/fourier_analysis/fourier_series_expansion.ipynb
+        - file: notebooks/fourier_analysis/fourier_series_convergence_and_gibbs_phenomenon.ipynb
         - file: notebooks/fourier_analysis/fourier_series_expansion_angular_frequency.ipynb
         - file: notebooks/fourier_analysis/complex_fourier_series_expansion.ipynb
         - file: notebooks/fourier_analysis/fourier_transform.ipynb
