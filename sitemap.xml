@@ -56,6 +56,9 @@
     <loc>http://localhost:3000/fourier-series-expansion</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/fourier-series-convergence-and-gibbs-phenomenon</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/fourier-series-expansion-angular-frequency</loc>
   </url>
   <url>
